@@ -1,0 +1,3 @@
+USD_PLN = 3.75
+EUR_PLN = 4.48
+PLN_EUR = 0.22

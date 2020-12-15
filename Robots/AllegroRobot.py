@@ -58,7 +58,7 @@ class AllegroRobot(SiteRobot):
         self.site_configuration = {
             "title_class": ['h1', '_1s2v1 _1djie _4lbi0'],
             "nick_class": ['a', '_w7z6o _15mod _9a071_3tKtu'],
-            "price": ['div', '_1svub _lf05o _9a071_2MEB_'],
+            "price": ['div', '_1svub _lf05o _9a071_3SxcJ'],
             "ship_country": ['div', '_15mod _1vryf _34279_13Rv4'],
             "offer_title": ['h2', 'mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0'],
             "sizes_tile": ['div', '_9a071_1bSFU _1nfka'],

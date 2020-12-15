@@ -24,15 +24,40 @@ class Stockx:
             'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
             'cookie': '_pk_ses.421.1a3e=*; stockx_session=b0a886bc-f000-4735-b474-0f5d22959af6; __cfduid=dc84a6ce884ae4c5bbbe7ecc01f50f4781607857489; stockx_homepage=sneakers; rskxRunCookie=0; _scid=69794e68-daaa-4689-a08a-653f2c2dbe07; IR_gbd=stockx.com; rCookie=2xu1o2c58lne31knzc5sbkim2rr2c; language_code=en; stockx_market_country=PL; _pxvid=087dda0f-3d33-11eb-b2af-0242ac12000e; _gcl_au=1.1.447518067.1607857498; stockx_product_visits=3; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=true; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; QuantumMetricUserID=ac60b5525eda46fbacf6bad55f21e75d; QuantumMetricSessionID=319525b7894c1e882401922758634c30; is_gdpr=true; stockx_ip_region=PL; _px3=e25d45b8342ba31c6935d7664720001a234bc55f5f870982cedadc40265ea4d3:SqR2naJF0SUyk/0KmNcs2Z+zaReVGF0U/7TK8/cxxz3VdhHMuDxn53uVwbcFDEBtvDmEGGTt3ifNNsWwBUUmtQ==:1000:ejGI9pEg3jz6YgsUEPziAzK+V4xwTMdUoh2lcTgWmdsfRcEBJ/6rpAP0vE5FLPvmGkmQ2eZHbVuJtYtfwDV4HTSWVUb25nu7GFvnM/OHM6dzgLT9yemGN04VF2VY7dZOGHHjlEbyoe+17R76O33Fe6/sJ4q+qMcxnZikaLlVxVI=; IR_9060=1607858369541%7C0%7C1607857478671%7C%7C; IR_PI=56cb718c-3d30-11eb-a8cd-42010a246625%7C1607944769541; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-13T11%3A19%3A29.665Z; stockx_dismiss_modal_expiration=2020-12-20T11%3A19%3A29.662Z; _dd_s=rum=0&expire=1607859275688; _pk_id.421.1a3e=7ddbd94845b1f656.1607857490.1.1607858376.1607857490.; lastRskxRun=1607858376498; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220'
         }
-
         self.product_info_uri = 'https://stockx.com/api/browse?&_search=PID&dataType=product&country=PL'
         self.product_bids_uri = "https://stockx.com/api/products/PRODUCT/activity?state=300&currency=EUR&limit=1000" \
                                 "&page=PAGE&sort=amount&order=DESC&country=PL"
         self.payload = {}
+        self.pids_not_available = self.open_files()
         # TODO remove hardcoded path
         self.file = None
 
+    def open_files(self):
+        dict = None
+        try:
+            dict = {
+                'adidas': open('D:\\Projects\\Python\\ResellScraperv2\\txt\\adidas_PID_not_available.txt',
+                               'r').readlines(),
+                'nike': open('D:\\Projects\\Python\\ResellScraperv2\\txt\\nike_PID_not_available.txt', 'r').readlines()
+            }
+        except IOError as E:
+            print('Problem with opening file')
+            print(E)
+
+        return dict
+
+    def is_pid_available(self, pid):
+        pids_a = self.pids_not_available['adidas']
+        pids_n = self.pids_not_available['nike']
+        if pid in pids_a or pid in pids_n:
+            return False
+        else:
+            return True
+
     def get_stockx_product_info(self, pid):
+        if not self.is_pid_available(pid):
+            print('Skipping pid bc its not on stockX {}'.format(pid))
+            return None
         url = self.product_info_uri.replace('PID', pid.replace(' ', '%20'))
         json_response = self.make_request(url, self.payload, self.request_headers)
         stockx_product = None

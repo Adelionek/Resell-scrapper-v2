@@ -11,7 +11,5 @@ class StockxProduct(Product):
         self.stockx_link = stockx_link
         self.stockx_pid = stockx_pid
 
-
-
     def check_available_bids(self):
         pass

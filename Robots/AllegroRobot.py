@@ -1,3 +1,5 @@
+import time
+
 from Robots.SiteRobot import SiteRobot
 from Products.SourceProduct import SourceProduct
 from Products.OutputProduct import OutputProduct
@@ -28,11 +30,14 @@ class AllegroRobot(SiteRobot):
         self.pages = {
             "nike_M": "https://allegro.pl/kategoria/meskie-sportowe-257929?stan=nowe&dostawa-z-polski=tak&oryginalne"
                       "-opakowanie-producenta=pude%C5%82ko&marka=Nike&order=n&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
-            "nike_W": "https://allegro.pl/kategoria/damskie-sportowe-257903?marka=Nike&dostawa-z-polski=tak"
+            "nike_W": "https://allegro.pl/kategoria/damskie-sportowe-257903?marka=Nike&dostawa-z-polski=tak&order="
                       "&freeReturn=1&stan=nowe&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
             'adidas_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=adidas&'
                         'freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&'
-                        'bmatch=dict20120-m-ctx-fas-1-4-1203'
+                        'bmatch=dict20120-m-ctx-fas-1-4-1203&order=n',
+            'new_balance_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20'
+                             'Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&b'
+                             'match=dict20120-m-ctx-fas-1-2-1203&order='
         }
         self.fake_sellers = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB', 'world-shop',
                              'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324',
@@ -56,9 +61,9 @@ class AllegroRobot(SiteRobot):
                              'tarasofobia', 'ntulppma', 'Buty_UK', 'saleneo-com', 'saleneo_pl', 'max-trade-ltd',
                              'dostawa-w-2tyg']
         self.site_configuration = {
-            "title_class": ['h1', '_1s2v1 _1djie _4lbi0'],
-            "nick_class": ['a', '_w7z6o _15mod _9a071_3tKtu'],
-            "price": ['div', '_1svub _lf05o _9a071_3SxcJ'],
+            "title_class": ['h1', '_9a071_1Ux3M _9a071_3nB-- _9a071_1R3g4 _9a071_1S3No'],
+            "nick_class": ['a', '_w7z6o _15mod _9a071_1BlBd'],
+            "price": ['div', '_1svub _lf05o _9a071_2MEB_'],
             "ship_country": ['div', '_15mod _1vryf _34279_13Rv4'],
             "offer_title": ['h2', 'mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0'],
             "sizes_tile": ['div', '_9a071_1bSFU _1nfka'],
@@ -137,7 +142,7 @@ class AllegroRobot(SiteRobot):
         switcher = {
             'nike': nike,
             'adidas': adidas,
-            'new_balance': None
+            'new_balance': new_balance
         }
         return switcher.get(argument, "Invalid brand")
 
@@ -181,7 +186,8 @@ class AllegroRobot(SiteRobot):
 
         source_product = SourceProduct(pid, auction_title, brand, 'Allegro', offer_link, price)
         source_product.available_sizes['EU'] = available_sizes
-        source_product.available_sizes['US'] = source_product.eu_to_us(available_sizes)
+        # print(offer_link)
+        source_product.available_sizes['US'] = source_product.eu_to_us(available_sizes, brand)
 
         return source_product
 
@@ -204,7 +210,7 @@ class AllegroRobot(SiteRobot):
             #       format(output_product.offer_link, output_product.offer_price, payout))
             return None
         try:
-            eu_size = output_product.us_to_eu([bid_shoe_size])
+            eu_size = output_product.us_to_eu([bid_shoe_size], source_product.brand)
             output_product.bid_size = {'EU': eu_size[0] if eu_size else None, 'US': bid_shoe_size}
             output_product.available_sizes = source_product.available_sizes
             output_product.payout = payout_pln
@@ -219,19 +225,18 @@ class AllegroRobot(SiteRobot):
             # TODO ADD AS DICT size: bid
             output_product.highest_available_bids.append(bids['localAmount'])
 
-        print(json.dumps(output_product.__dict__, indent=1))
-
         return output_product
 
-    # TODO: save non existing pids in file/list
     # brand example: adidas_M
 
     def start_process(self, start_page, end_page, brand):
         for p in range(start_page, end_page):
-            self.stockxManager.file = open('D:\\Projects\\Python\\ResellScraperv2\\txt\\nike_PID_not_available.txt', 'a')
+            self.stockxManager.file = \
+                open('D:\\Projects\\Python\\ResellScraperv2\\txt\\new_balance_PID_not_available.txt', 'a')
             brand_page = self.pages.get(brand)
             offer_links = self.get_product_list(brand_page, p)
             for offer_link in offer_links:
+                time.sleep(2)
                 offer_soup = self.siteSoup.make_soup(offer_link)
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
@@ -239,12 +244,13 @@ class AllegroRobot(SiteRobot):
                 is_offer_valid = self.validate_offer(offer_soup, offer_link)
                 if not is_offer_valid:
                     continue
+                # find pid on allegro site
                 pid = self.find_pid_pattern(offer_soup, offer_link, brand[:-2])
                 if not pid:
                     continue
                 # print(pid)
                 # create sourceProduct
-                source_product = self.create_source_product(offer_soup, offer_link, 'nike', pid)
+                source_product = self.create_source_product(offer_soup, offer_link, brand, pid)
 
                 # get stockX productInfo
                 stockx_product = self.stockxManager.get_stockx_product_info(source_product.product_id)
@@ -266,4 +272,6 @@ class AllegroRobot(SiteRobot):
 
                 # create output product
                 output_product = self.create_output_product(source_product, stockx_product, available_bids)
+                if output_product:
+                    print(json.dumps(output_product.__dict__, indent=1))
             self.stockxManager.file.close()

@@ -1,11 +1,12 @@
 import time
 import requests
 from bs4 import BeautifulSoup
-
+import random
 
 class Soup:
     def __init__(self, request_headers):
         self.request_headers = request_headers
+        self.proxies = {'http': 'http://18.196.102.225:3128'}
 
     def make_soup(self, link):
         payload = {}
@@ -13,7 +14,14 @@ class Soup:
         retry_times = 0
         while True:
             try:
-                link_req = requests.request("GET", link, headers=headers, data=payload)
+                rand = random.randint(0, 1)
+                proxy = None
+                if rand == 0:
+                    proxy = self.proxies
+                    # print('proxy enabled')
+                # else:
+                #     print('proxy disabled')
+                link_req = requests.request("GET", link, headers=headers, data=payload, proxies=proxy)
                 link_content = link_req.text
                 soup = BeautifulSoup(link_content, 'html.parser')
                 if link_req.status_code == 200:

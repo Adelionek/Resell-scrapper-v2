@@ -1,0 +1,33 @@
+from Const.Patterns import *
+from Const.SizeChart import *
+
+
+def switch(brand, type):
+    switcher = {
+        'nike_M': {
+            'pattern': nike,
+            'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\nike_PID_not_available.txt',
+            'size_chart': nike_M
+        },
+        'nike_W': {
+            'pattern': nike,
+            'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\nike_W_PID_not_available.txt',
+            'size_chart': nike_W
+        },
+        'adidas_M': {
+            'pattern': adidas,
+            'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\adidas_PID_not_available.txt',
+            'size_chart': adidas_M
+        },
+        'new_balance_M': {
+            'pattern': new_balance,
+            'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\new_balance_PID_not_available.txt',
+            'size_chart': new_balance_M
+        },
+        'reebok_M': {
+            'pattern': reebok,
+            'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\reebok_PID_not_available.txt',
+            'size_chart': reebok_M
+        }
+    }
+    return switcher[brand][type]

@@ -12,33 +12,19 @@ class Stockx:
     def __init__(self):
         self.request_headers_list = [{
             'authority': 'stockx.com',
-            'accept': 'application/json',
-            'dnt': '1',
-            'x-requested-with': 'XMLHttpRequest',
-            'appos': 'web',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-            'appversion': '0.1',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search/sneakers?s=adidas2',
-            'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '_pk_ses.421.1a3e=*; stockx_session=b0a886bc-f000-4735-b474-0f5d22959af6; __cfduid=dc84a6ce884ae4c5bbbe7ecc01f50f4781607857489; stockx_homepage=sneakers; rskxRunCookie=0; _scid=69794e68-daaa-4689-a08a-653f2c2dbe07; IR_gbd=stockx.com; rCookie=2xu1o2c58lne31knzc5sbkim2rr2c; language_code=en; stockx_market_country=PL; _pxvid=087dda0f-3d33-11eb-b2af-0242ac12000e; _gcl_au=1.1.447518067.1607857498; stockx_product_visits=3; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=true; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; QuantumMetricUserID=ac60b5525eda46fbacf6bad55f21e75d; QuantumMetricSessionID=319525b7894c1e882401922758634c30; is_gdpr=true; stockx_ip_region=PL; _px3=e25d45b8342ba31c6935d7664720001a234bc55f5f870982cedadc40265ea4d3:SqR2naJF0SUyk/0KmNcs2Z+zaReVGF0U/7TK8/cxxz3VdhHMuDxn53uVwbcFDEBtvDmEGGTt3ifNNsWwBUUmtQ==:1000:ejGI9pEg3jz6YgsUEPziAzK+V4xwTMdUoh2lcTgWmdsfRcEBJ/6rpAP0vE5FLPvmGkmQ2eZHbVuJtYtfwDV4HTSWVUb25nu7GFvnM/OHM6dzgLT9yemGN04VF2VY7dZOGHHjlEbyoe+17R76O33Fe6/sJ4q+qMcxnZikaLlVxVI=; IR_9060=1607858369541%7C0%7C1607857478671%7C%7C; IR_PI=56cb718c-3d30-11eb-a8cd-42010a246625%7C1607944769541; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-13T11%3A19%3A29.665Z; stockx_dismiss_modal_expiration=2020-12-20T11%3A19%3A29.662Z; _dd_s=rum=0&expire=1607859275688; _pk_id.421.1a3e=7ddbd94845b1f656.1607857490.1.1607858376.1607857490.; lastRskxRun=1607858376498; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220'
-        }, {
-            'authority': 'stockx.com',
             'appos': 'web',
             'dnt': '1',
             'x-requested-with': 'XMLHttpRequest',
-            'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5USkNNVVEyUmpBd1JUQXdORFk0TURRelF6SkZRelV4TWpneU5qSTNNRFJGTkRZME0wSTNSQSJ9.eyJodHRwczovL3N0b2NreC5jb20vY3VzdG9tZXJfdXVpZCI6ImRiYmE3NjYwLTVjZGEtMTFlOC1hZmVkLTEyZjkyNmEyYzZjNiIsImh0dHBzOi8vc3RvY2t4LmNvbS9nYV9ldmVudCI6IkxvZ2dlZCBJbiIsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuc3RvY2t4LmNvbS8iLCJzdWIiOiJhdXRoMHxkYmJhNzY2MC01Y2RhLTExZTgtYWZlZC0xMmY5MjZhMmM2YzYiLCJhdWQiOiJnYXRld2F5LnN0b2NreC5jb20iLCJpYXQiOjE2MDc5MzQwMzQsImV4cCI6MTYwNzk3NzIzNCwiYXpwIjoiT1Z4cnQ0VkpxVHg3TElVS2Q2NjFXMER1Vk1wY0ZCeUQiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIn0.P9AXu_MRCDsKLLqRI8nSwRzHLEe0NGmf-ox8Nf45aEGSBq0TnvEwIKImP-lS4ZF84wPXcEADkoIFdvALwQ1J3KHjGPH6VnsBgWpep24ZRHwOSoJm2_TMtCqDlcIGeKAHa0Pi8ASYcypYJLtzSHqNqKe-Sjkzri1FSdDiF3fiyFz3kkDOVt-8LOArxkO8ivlx_dc04sw7ZpLW4gZ_8mSDRQ9bk4PTh14QKGIalju5vt_IKgQRVdNod8S_s8xB0yG0bybqhSigYpIpJ2Y-rQHREVh4SYJMGUREmGLhruhcHSZcDidz-FT__IZthluqfK6XOj7hJr6-tqUoMGRutvUaAg',
+            'authorization': '',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
             'appversion': '0.1',
             'accept': '*/*',
             'sec-fetch-site': 'same-origin',
             'sec-fetch-mode': 'cors',
             'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search?s=nike',
+            'referer': 'https://stockx.com/search?s=yeezy',
             'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '__cfduid=dc84a6ce884ae4c5bbbe7ecc01f50f4781607857489; rskxRunCookie=0; _scid=69794e68-daaa-4689-a08a-653f2c2dbe07; IR_gbd=stockx.com; rCookie=2xu1o2c58lne31knzc5sbkim2rr2c; language_code=en; stockx_market_country=PL; _pxvid=087dda0f-3d33-11eb-b2af-0242ac12000e; _gcl_au=1.1.447518067.1607857498; QuantumMetricUserID=ac60b5525eda46fbacf6bad55f21e75d; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-13T11%3A19%3A29.665Z; stockx_dismiss_modal_expiration=2020-12-20T11%3A19%3A29.662Z; stockx_seen_ask_new_info=true; stockx_user_shipping_region=PL; _ga=GA1.2.896455818.1607871259; _gid=GA1.2.596938581.1607871259; tracker_device=af9b767b-f5c7-4c9b-82b7-4b4f88cd97a8; ajs_user_id=%22dbba7660-5cda-11e8-afed-12f926a2c6c6%22; ajs_anonymous_id=%22d994a95e-d527-4946-a271-583f164498d0%22; mfaLogin=err; token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5USkNNVVEyUmpBd1JUQXdORFk0TURRelF6SkZRelV4TWpneU5qSTNNRFJGTkRZME0wSTNSQSJ9.eyJodHRwczovL3N0b2NreC5jb20vY3VzdG9tZXJfdXVpZCI6ImRiYmE3NjYwLTVjZGEtMTFlOC1hZmVkLTEyZjkyNmEyYzZjNiIsImh0dHBzOi8vc3RvY2t4LmNvbS9nYV9ldmVudCI6IkxvZ2dlZCBJbiIsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuc3RvY2t4LmNvbS8iLCJzdWIiOiJhdXRoMHxkYmJhNzY2MC01Y2RhLTExZTgtYWZlZC0xMmY5MjZhMmM2YzYiLCJhdWQiOiJnYXRld2F5LnN0b2NreC5jb20iLCJpYXQiOjE2MDc5MzQwMzQsImV4cCI6MTYwNzk3NzIzNCwiYXpwIjoiT1Z4cnQ0VkpxVHg3TElVS2Q2NjFXMER1Vk1wY0ZCeUQiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIn0.P9AXu_MRCDsKLLqRI8nSwRzHLEe0NGmf-ox8Nf45aEGSBq0TnvEwIKImP-lS4ZF84wPXcEADkoIFdvALwQ1J3KHjGPH6VnsBgWpep24ZRHwOSoJm2_TMtCqDlcIGeKAHa0Pi8ASYcypYJLtzSHqNqKe-Sjkzri1FSdDiF3fiyFz3kkDOVt-8LOArxkO8ivlx_dc04sw7ZpLW4gZ_8mSDRQ9bk4PTh14QKGIalju5vt_IKgQRVdNod8S_s8xB0yG0bybqhSigYpIpJ2Y-rQHREVh4SYJMGUREmGLhruhcHSZcDidz-FT__IZthluqfK6XOj7hJr6-tqUoMGRutvUaAg; below_retail_type=; _pk_ses.421.1a3e=*; QuantumMetricSessionID=576a264c50692c69aa44dede262b9d5a; bid_ask_button_type=; stockx_selected_currency=EUR; is_gdpr=true; cookie_policy_accepted=true; stockx_ip_region=PL; stockx_session=8025b7dd-d250-4a5c-ae74-7af2fb84c295; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=true; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=false; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v1; stockx_product_visits=19; stockx_default_sneakers_size=All; stockx_homepage=sneakers; _px3=be977b7ff995be17f3c8d73f3346f67df6b6ddbaa1892ba8043ecedbf04a826d:YlW/DLwkXcScF5fBiI2duWai5Ls0wEv5JPEnX0Yf5IHrNud7rQU63QX3i/B8Nhzouv4CbM0ANzGrKUHcnTVO1Q==:1000:t9cwCFceCxwrAzDiUlJShsFBxZa4uIeDfE4mk+yd6Skamji9Nefuj8+fw6lUxJMyfCIYy7h77NPIZUUy9AGq1FO5tClIq4p99tYX8kBAx/iKoJMPvaOCy8dv5rmtyoQdQirJh0cG2Bc9nagEabFvoTUcfao38lzavYQmzVyHmho=; _dd_s=rum=0&expire=1607941706755; _pk_id.421.1a3e=7ddbd94845b1f656.1607857490.8.1607940807.1607939244.; _gat=1; lastRskxRun=1607940807370; IR_9060=1607940794993%7C0%7C1607939244579%7C%7C; IR_PI=56cb718c-3d30-11eb-a8cd-42010a246625%7C1608027194993; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220'
+            'cookie': '__cfduid=d33aca2c178cf77c7dc82df8c1d4efc371608985205; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; is_gdpr=true; stockx_ip_region=PL; stockx_session=eae1730b-247a-4b21-ae62-e4ea296020c7; _gcl_au=1.1.492563348.1608985207; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=false; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; _pk_ses.421.1a3e=*; IR_gbd=stockx.com; IR_9060=1608985207525%7C0%7C1608985207525%7C%7C; IR_PI=b0f9794f-4774-11eb-a8cd-42010a246625%7C1609071607525; _px3=14243d0248a0ce51d11929fd73d6fd2d225bc4dfb585a9b0266407e1ecf9e548:gquI5vDjnh6He8M1cb9YcE7HmKThfKkPIvXyylNwNiirQ8KE6fw3TGRMhvol2NQ3+BQJTAuBTyPkcNCa1TWsjg==:1000:RZhfO5sod++1Tg8EZsHLBun+74hjbW5qa9aRZMaxERPsZkQwoeV52uaiiruvfN8cm4d82fUvelJ9v+twyh71HaBq/YAM2iM3hfSL6F/9LKAZJH+ANkwznyy4A+nxeYMQV+0lRacsSEJjss+WKQwrqBYrrGNrBh+TdSg7kGrOQ90=; _scid=0fb54553-0561-47ca-8964-b81a225d5ddb; rskxRunCookie=0; rCookie=w96dlokp7mtm5dw9ji5hrokj1jznya; QuantumMetricUserID=99c87bd3d278bbc43d3056f315bdfafe; QuantumMetricSessionID=781f8db0fe2a27d4cf361e11cf21e686; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-26T12%3A20%3A08.796Z; stockx_dismiss_modal_expiration=2021-01-02T12%3A20%3A08.796Z; _pxvid=b42ae1e5-4774-11eb-87d7-0242ac12000c; _dd_s=rum=0&expire=1608986128443; _pk_id.421.1a3e=fc1c3dc2f0f11d7e.1608985207.1.1608985228.1608985207.; lastRskxRun=1608985228639; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220'
         }, {
             'authority': 'stockx.com',
             'appos': 'web',
@@ -51,10 +37,25 @@ class Stockx:
             'sec-fetch-site': 'same-origin',
             'sec-fetch-mode': 'cors',
             'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search/sneakers?s=new%20balance',
+            'referer': 'https://stockx.com/search?s=yeezy',
             'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '__cfduid=db752f586b5f762d7696980c5a09840471607940902; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; _pxvid=3b30e5b8-3df5-11eb-9fc2-0242ac120018; is_gdpr=true; stockx_ip_region=PL; stockx_session=2b14769e-6293-435a-9bdb-d2317a6c29ee; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=false; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; _gcl_au=1.1.551579300.1607940905; _px3=7618a017f9e1c3eb28e2cb86f1e9fa8a50511f8019693c0d728e247fd4bce9f4:CEwjk900x8qq5NBtEfsYn0xpcBVgbm5MwwT0ZGIOQWnAYEhb0MIFJEeFaYNk7BxWCkdOrvluCvMfBPQBMhtfqA==:1000:sBZVlcAXQugpNBvwihYrNckT8p31ctOwNgypNirnuOPLrOgC8pcATLKc6xpU6l5pULJttldfRXqyvTzYedHrc3KQac1rx52SyiTDA1rf7+jd0ZOMwd/3cjRmED4cVhT9Y9wytzEIu+uBGHXcpVXroJyJWZz9uRrQvJcxkZESQzY=; _pk_ses.421.1a3e=*; IR_gbd=stockx.com; IR_9060=1607940905589%7C0%7C1607940905589%7C%7C; IR_PI=3ca4899e-3df5-11eb-a8cd-42010a246625%7C1608027305589; _scid=5676874d-3f0c-475d-b14c-5a260507f216; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-14T10%3A15%3A05.908Z; stockx_dismiss_modal_expiration=2020-12-21T10%3A15%3A05.907Z; QuantumMetricUserID=86bacc1978f378b8fe82d45c854c2fa5; QuantumMetricSessionID=f4bb0cb9315caa3a03a447fb78dab190; rskxRunCookie=0; rCookie=2xu1o2c58lne31knzc5sbkim2rr2c; _dd_s=rum=0&expire=1607941813418; _pk_id.421.1a3e=100ce670607d7a43.1607940906.1.1607940914.1607940906.; lastRskxRun=1607940914216; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220',
-            'if-none-match': 'W/"2f6ec-3qA5NZj4ZVMKVfxcevP21HlgMNw"'
+            'cookie': '_pk_ses.421.1a3e=*; rskxRunCookie=0; _scid=d90a6d91-93b2-429f-bc83-4bd3c577c06c; IR_gbd=stockx.com; rCookie=w96dlokp7mtm5dw9ji5hrokj1jznya; _pxvid=703c7075-4775-11eb-ab27-0242ac12000d; QuantumMetricUserID=c0a422cfde80243b514873ee598ae910; QuantumMetricSessionID=93907da6ad0cc7b9839741d307dab455; _dd_s=rum=0&expire=1608986434933; _pk_id.421.1a3e=66abd08559be727a.1608985527.1.1608985536.1608985527.; lastRskxRun=1608985535712; IR_9060=1608985527733%7C0%7C1608985228828%7C%7C; IR_PI=b0f9794f-4774-11eb-a8cd-42010a246625%7C1609071927733; stockx_session=38bb618f-2ed5-430f-a048-6d5576db4067; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220',
+            'if-none-match': 'W/"33cea-ZwyFbWBgXEOP/q/pb8cc9RAsE2s"'
+        }, {
+            'authority': 'stockx.com',
+            'appos': 'web',
+            'dnt': '1',
+            'x-requested-with': 'XMLHttpRequest',
+            'authorization': '',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+            'appversion': '0.1',
+            'accept': '*/*',
+            'sec-fetch-site': 'same-origin',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-dest': 'empty',
+            'referer': 'https://stockx.com/search/sneakers?s=nike',
+            'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
+            'cookie': '_pk_ses.421.1a3e=*; rskxRunCookie=0; _scid=5b02445e-54cf-4231-8e19-caab8077c615; IR_gbd=stockx.com; rCookie=w96dlokp7mtm5dw9ji5hrokj1jznya; _pxvid=9323b48c-4775-11eb-94a3-0242ac120005; QuantumMetricUserID=f8371a05b898cc035342bff5cac3179a; QuantumMetricSessionID=98f984f54468e010a0935937f0856259; _dd_s=rum=0&expire=1608986492285; _pk_id.421.1a3e=6f677cb48415bd9c.1608985586.1.1608985593.1608985586.; stockx_homepage=sneakers; lastRskxRun=1608985593075; IR_9060=1608985586290%7C0%7C1608985535886%7C%7C; IR_PI=b0f9794f-4774-11eb-a8cd-42010a246625%7C1609071986290; stockx_session=3c4243e9-9383-4f52-883d-8c1cf23e7a3b'
         }, {
             'authority': 'stockx.com',
             'appos': 'web',
@@ -76,35 +77,15 @@ class Stockx:
         self.product_bids_uri = "https://stockx.com/api/products/PRODUCT/activity?state=300&currency=EUR&limit=1000" \
                                 "&page=PAGE&sort=amount&order=DESC&country=PL"
         self.payload = {}
-        self.pids_not_available = self.open_files()
-        # TODO remove hardcoded path
+        self.pids_not_available = None
         self.file = None
+        # TODO remove hardcoded path
 
     header_num = 0
 
-    def open_files(self):
-        dict = None
-        try:
-            dict = {
-                'adidas': open('D:\\Projects\\Python\\ResellScraperv2\\txt\\adidas_PID_not_available.txt',
-                               'r').readlines(),
-                'nike': open('D:\\Projects\\Python\\ResellScraperv2\\txt\\nike_PID_not_available.txt', 'r').readlines(),
-                'new_balance': open('D:\\Projects\\Python\\ResellScraperv2\\txt\\new_balance_PID_not_available.txt',
-                                    'r').readlines()
-
-            }
-        except IOError as E:
-            print('Problem with opening file')
-            print(E)
-
-        return dict
-
     def is_pid_available(self, pid):
-        pids_a = self.pids_not_available['adidas']
-        pids_n = self.pids_not_available['nike']
-        pids_nb = self.pids_not_available['new_balance']
         pid = pid + '\n'
-        if pid in pids_n or pid in pids_a or pid in pids_nb:
+        if pid in self.pids_not_available:
             return False
         else:
             return True
@@ -120,11 +101,15 @@ class Stockx:
         if not json_response:
             return None
         if json_response['Pagination']['total'] == 0:
-            # self.file.write(pid + '\n')
+            file_pid = pid + '\n'
+            if file_pid not in self.pids_not_available:
+                self.file.write(file_pid)
             return None
         for product in json_response['Products']:
             try:
                 # TODO NoneType' object has no attribute 'replace'
+                if product['brand'].lower() not in ['reebok', 'nike', 'puma', 'adidas', 'new balance']:
+                    continue
                 if product['styleId'].replace('-', '').replace(' ', '') == pid.replace('-', '').replace(' ', ''):
                     retail = product['retailPrice']
                     retail_pl = retail * EUR_PLN if retail else None
@@ -134,7 +119,7 @@ class Stockx:
                                                    retail_pl, stockx_link, stockx_pid)
                     return stockx_product
             except AttributeError as e:
-                print(e)
+                print("Get stockx product info error: {}".format(e))
                 pass
 
         return stockx_product

@@ -4,6 +4,7 @@ from Robots.SiteRobot import SiteRobot
 from Products.SourceProduct import SourceProduct
 from Products.OutputProduct import OutputProduct
 from Const.Patterns import *
+from GenericFunctions.Functions import *
 from Const.Currency import *
 import re
 import json
@@ -30,14 +31,19 @@ class AllegroRobot(SiteRobot):
         self.pages = {
             "nike_M": "https://allegro.pl/kategoria/meskie-sportowe-257929?stan=nowe&dostawa-z-polski=tak&oryginalne"
                       "-opakowanie-producenta=pude%C5%82ko&marka=Nike&order=n&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
-            "nike_W": "https://allegro.pl/kategoria/damskie-sportowe-257903?marka=Nike&dostawa-z-polski=tak&order="
-                      "&freeReturn=1&stan=nowe&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
+            "nike_W": "https://allegro.pl/kategoria/damskie-sportowe-257903?marka=Nike&dostawa-z-polski=tak&order=n&"
+                      "freeReturn=1&stan=nowe&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
             'adidas_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=adidas&'
                         'freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&'
                         'bmatch=dict20120-m-ctx-fas-1-4-1203&order=n',
+            'adidas_W': 'https://allegro.pl/kategoria/damskie-sportowe-257903?marka=adidas&dostawa-z-polski=tak&'
+                        'freeReturn=1&stan=nowe&order=n&bmatch=dict201214-ctx-fas-1-2-1218',
             'new_balance_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20'
                              'Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&b'
-                             'match=dict20120-m-ctx-fas-1-2-1203&order='
+                             'match=dict20120-m-ctx-fas-1-2-1203&order=',
+            'reebok_M': "https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&oryginalne-opakowanie"
+                        "-producenta=pude%C5%82ko&order=n&bmatch=dict201214-ctx-fas-1-2-1218&stan=nowe"
+                        "&stan=nowe%20bez%20metki&stan=nowe%20z%20defektem&marka=Reebok"
         }
         self.fake_sellers = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB', 'world-shop',
                              'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324',
@@ -59,7 +65,8 @@ class AllegroRobot(SiteRobot):
                              'NaGiewoncie1409', 'CalceolarPL', 'KustoSeller32', 'alleo-promocje', 'chentaozo350604',
                              'luzhuangly653558', 'qiongyouyv098054', 'AnfiniHardaway', 'Janutzboots', 'Martunia_91',
                              'tarasofobia', 'ntulppma', 'Buty_UK', 'saleneo-com', 'saleneo_pl', 'max-trade-ltd',
-                             'dostawa-w-2tyg']
+                             'dostawa-w-2tyg', '4F_Sklep', 'alleo-promocje', 'dostawa-w-2tyg', 'cool_shoes_1993',
+                             'Client:58508393', 'dostawa-w-2tyg', 'super_sneakers', 'Stasic77', 'Fashion-styleLTD']
         self.site_configuration = {
             "title_class": ['h1', '_9a071_1Ux3M _9a071_3nB-- _9a071_1R3g4 _9a071_1S3No'],
             "nick_class": ['a', '_w7z6o _15mod _9a071_1BlBd'],
@@ -69,7 +76,7 @@ class AllegroRobot(SiteRobot):
             "sizes_tile": ['div', '_9a071_1bSFU _1nfka'],
             "current_size": ['div', '_17qy1 _1vryf _f8818_1X1F-']
         }
-        self.washed_titles = ['Pegasus Turbo', 'Max 90', 'max 90', '90', '270']
+        self.washed_titles = ['Pegasus Turbo', 'Max 90', 'max 90']
 
     def validate_bids(self, stockx_bids, available_bids):
         pass
@@ -82,8 +89,10 @@ class AllegroRobot(SiteRobot):
             col = soup.find_all(self.site_configuration['current_size'][0], self.site_configuration['current_size'][1])
             for t in col:
                 if t.text == 'Rozmiar:':
-                    available_sizes.append(t.next_sibling.text)
-                    return available_sizes
+                    size = t.next_sibling.text
+                    if size != 'inny':
+                        available_sizes.append(size)
+                        return available_sizes
 
         for size in tiles:
             try:
@@ -105,6 +114,9 @@ class AllegroRobot(SiteRobot):
             print("IndexError: {}".format(e))
             return False
 
+        if seller_name == 'max-trade-ltd':
+            print("FOUND FAKE SELLER MAX TRADE LTD")
+
         if seller_name in self.fake_sellers:
             return False
         for washed in self.washed_titles:
@@ -120,37 +132,29 @@ class AllegroRobot(SiteRobot):
         return True
 
     def find_pid_pattern(self, soup, offer_link, brand):
+        pattern = switch(brand, 'pattern')
         params_pid = [pid.text.split(':')[1] for pid in soup.find_all("li", "_f8818_2jDsV")
                       if 'Kod producenta' in pid.text]
         if params_pid:
-            if len(params_pid[0]) < 11:
+            if self.validate_pid(params_pid[0], pattern):
                 return params_pid[0]
-        content = self.get_site_content(offer_link, soup)
 
-        pattern = self.switch(brand)
+        content = self.get_site_content(offer_link, soup)
         found_pid = re.findall(pattern, content)
+
         if found_pid:
             for pid in found_pid:
-                hasnumber = any(char.isdigit() for char in pid)
-                if '%' in pid:
-                    return None
-                if hasnumber:
+                if self.validate_pid(pid, pattern):
                     return pid
-        return None
 
-    def switch(self, argument):
-        switcher = {
-            'nike': nike,
-            'adidas': adidas,
-            'new_balance': new_balance
-        }
-        return switcher.get(argument, "Invalid brand")
+        return None
 
     def get_product_list(self, page_link, page):
         product_list = []
         uri = page_link + '&p={}'.format(page)
         print('PAGE: {} URI: {}'.format(page, uri))
         soup = self.siteSoup.make_soup(uri)
+        # TODO ADD IF
         offers = soup.find_all(self.site_configuration['offer_title'][0], self.site_configuration['offer_title'][1])
         if not offers:
             # second class used by allegro
@@ -160,7 +164,7 @@ class AllegroRobot(SiteRobot):
             # TODO handle local seller
             if 'lokalnie' not in link:
                 product_list.append(link)
-        print(len(product_list))
+        # print(len(product_list))
         return product_list
 
     def get_site_content(self, site_link, soup=None):
@@ -230,13 +234,15 @@ class AllegroRobot(SiteRobot):
     # brand example: adidas_M
 
     def start_process(self, start_page, end_page, brand):
+        self.stockxManager.pids_not_available = open(switch(brand, 'file'), 'r').readlines()
         for p in range(start_page, end_page):
-            self.stockxManager.file = \
-                open('D:\\Projects\\Python\\ResellScraperv2\\txt\\new_balance_PID_not_available.txt', 'a')
+            self.stockxManager.file = open(switch(brand, 'file'), 'a')
             brand_page = self.pages.get(brand)
             offer_links = self.get_product_list(brand_page, p)
+            pids_processed = 0
+            all_offers = len(offer_links)
             for offer_link in offer_links:
-                time.sleep(2)
+                # time.sleep(2)
                 offer_soup = self.siteSoup.make_soup(offer_link)
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
@@ -245,10 +251,9 @@ class AllegroRobot(SiteRobot):
                 if not is_offer_valid:
                     continue
                 # find pid on allegro site
-                pid = self.find_pid_pattern(offer_soup, offer_link, brand[:-2])
+                pid = self.find_pid_pattern(offer_soup, offer_link, brand)
                 if not pid:
                     continue
-                # print(pid)
                 # create sourceProduct
                 source_product = self.create_source_product(offer_soup, offer_link, brand, pid)
 
@@ -256,6 +261,7 @@ class AllegroRobot(SiteRobot):
                 stockx_product = self.stockxManager.get_stockx_product_info(source_product.product_id)
                 if not stockx_product:
                     continue
+                pids_processed = pids_processed + 1
 
                 # get stockX product bids
                 stockx_all_product_bids = self.stockxManager.get_stockx_product_bids(stockx_product)
@@ -275,3 +281,5 @@ class AllegroRobot(SiteRobot):
                 if output_product:
                     print(json.dumps(output_product.__dict__, indent=1))
             self.stockxManager.file.close()
+            print("pids processed: {}/{}".format(pids_processed, all_offers))
+    #  self.stockxManager.pids_not_available.close()

@@ -1,4 +1,4 @@
-from Const.SizeChart import *
+from GenericFunctions.Functions import *
 
 
 class Product:
@@ -7,16 +7,8 @@ class Product:
         self.product_name = name
         self.brand = brand
 
-    def switch(self, argument):
-        switcher = {
-            'nike_M': nike_M,
-            'adidas_M': adidas_M,
-            'new_balance': None
-        }
-        return switcher.get(argument, "Invalid brand")
-
     def us_to_eu(self, size_array, brand):
-        size_chart = self.switch(brand)
+        size_chart = switch(brand, 'size_chart')
         eu_array = []
         for size in size_array:
             try:
@@ -27,7 +19,7 @@ class Product:
         return eu_array
 
     def eu_to_us(self, size_array, brand):
-        size_chart = self.switch(brand)
+        size_chart = switch(brand, 'size_chart')
         us_array = []
         for size in size_array:
             try:

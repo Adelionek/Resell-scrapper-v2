@@ -1,6 +1,6 @@
 from GenericClasses.Soup import Soup
 from GenericClasses.Stockx import Stockx
-
+from GenericFunctions.Functions import *
 
 class SiteRobot:
     def __init__(self, request_headers):
@@ -25,3 +25,11 @@ class SiteRobot:
 
     def get_site_content(self, site_link):
         pass
+
+    def validate_pid(self, found_pid, pid_pattern):
+        if 4 < len(found_pid) < 11:
+            hasnumber = any(char.isdigit() for char in found_pid)
+            checked_pid = re.findall(pid_pattern, found_pid)
+            if hasnumber and '%' not in found_pid and checked_pid:
+                return True
+        return False

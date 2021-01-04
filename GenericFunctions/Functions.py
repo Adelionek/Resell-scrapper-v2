@@ -19,6 +19,11 @@ def switch(brand, type):
             'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\adidas_PID_not_available.txt',
             'size_chart': adidas_M
         },
+        'adidas_W': {
+            'pattern': adidas,
+            'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\adidas_W_PID_not_available.txt',
+            'size_chart': adidas_W
+        },
         'new_balance_M': {
             'pattern': new_balance,
             'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\new_balance_PID_not_available.txt',

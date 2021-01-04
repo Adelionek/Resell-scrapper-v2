@@ -46,27 +46,24 @@ class AllegroRobot(SiteRobot):
                         "&stan=nowe%20bez%20metki&stan=nowe%20z%20defektem&marka=Reebok"
         }
         self.fake_sellers = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB', 'world-shop',
-                             'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324',
-                             'Tzmark', 'GTshoes', 'AlleButy1819', 'Eski_Sports', 'ButicSport', 'Razor69996',
-                             'Sneakers_On_Fire', 'sneakers_sale', 'mike__c', 'DIA-MOND-SHOP', 'GORDIOSpl',
-                             'halfprices', 'mkshoes00', 'sklep_DandB', 'dgkein', 'DirkNowitzki', 'DongmeiTrade',
-                             'Mrx_Shoes', 'sportowebuty24h', 'Taniejsieniedaa', 'GToutlet', 'wonderfully',
-                             'Tiger_77', 'minouglobal', 'halfprices'
-                                                        'plywak26', 'Start66FERRY', 'minouglobal', 'URSI151',
-                             'harlemworldnyc', 'awmax', 'maciejmaspor', 'Fashion-styleLTD', 'sportella_pl',
-                             'FreeSia333', 'handyshopping', 'Pewexolandia', 'Solo-Sport', 'laijiebd423209',
-                             'GORDIOSpl', 'MEGA-WYPRZEDAZE', 'LuxZone', 'jingxianb140725', 'TransMax97', 'Qijunlvyou',
-                             'MegaSales', 'EverySize', 'minouglobal', 'EGGG', 'max-trade-ltd', 'xenehho',
-                             'maciejmaspor', 'Razor69 996', 'littleyou', 'bangruowuren', 'lukaszmer', 'Modern_London'
-                                                                                                      'ONE-DESIGN',
+                             'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324', 'Tzmark',
+                             'GTshoes', 'AlleButy1819', 'Eski_Sports', 'ButicSport', 'Razor69996', 'Sneakers_On_Fire',
+                             'sneakers_sale', 'mike__c', 'DIA-MOND-SHOP', 'GORDIOSpl', 'halfprices', 'mkshoes00',
+                             'sklep_DandB', 'dgkein', 'DirkNowitzki', 'DongmeiTrade', 'Mrx_Shoes', 'sportowebuty24h',
+                             'Taniejsieniedaa', 'GToutlet', 'wonderfully', 'Tiger_77', 'minouglobal',
+                             'halfpricesplywak26', 'Start66FERRY', 'URSI151', 'harlemworldnyc', 'awmax', 'maciejmaspor',
+                             'Fashion-styleLTD', 'sportella_pl', 'FreeSia333', 'handyshopping', 'Pewexolandia',
+                             'Solo-Sport', 'laijiebd423209', 'MEGA-WYPRZEDAZE', 'LuxZone', 'jingxianb140725',
+                             'TransMax97', 'Qijunlvyou', 'MegaSales', 'EverySize', 'EGGG', 'max-trade-ltd', 'xenehho',
+                             'Razor69 996', 'littleyou', 'bangruowuren', 'lukaszmer', 'Modern_LondonONE-DESIGN',
                              'comewithme', 'Tanie-Kicksy', 'guger-online', 'RoseLee', 'Billa-shop', 'yubopid57777',
                              'CoolLabels', 'comewith', 'new_shoes_kicks', 'bestgood', 'jessciaaa', 'butyspecial_pl',
                              'Modern_London', 'yingying', 'ModenooBox', 'Paula_Shoes', 'KustoSeller3', 'CandySport',
                              'NaGiewoncie1409', 'CalceolarPL', 'KustoSeller32', 'alleo-promocje', 'chentaozo350604',
                              'luzhuangly653558', 'qiongyouyv098054', 'AnfiniHardaway', 'Janutzboots', 'Martunia_91',
-                             'tarasofobia', 'ntulppma', 'Buty_UK', 'saleneo-com', 'saleneo_pl', 'max-trade-ltd',
-                             'dostawa-w-2tyg', '4F_Sklep', 'alleo-promocje', 'dostawa-w-2tyg', 'cool_shoes_1993',
-                             'Client:58508393', 'dostawa-w-2tyg', 'super_sneakers', 'Stasic77', 'Fashion-styleLTD']
+                             'tarasofobia', 'ntulppma', 'Buty_UK', 'saleneo-com', 'saleneo_pl', 'dostawa-w-2tyg',
+                             '4F_Sklep', 'cool_shoes_1993', 'Client:58508393', 'super_sneakers', 'Stasic77']
+
         self.site_configuration = {
             "title_class": ['h1', '_9a071_1Ux3M _9a071_3nB-- _9a071_1R3g4 _9a071_1S3No'],
             "nick_class": ['a', '_w7z6o _15mod _9a071_1BlBd'],
@@ -76,7 +73,7 @@ class AllegroRobot(SiteRobot):
             "sizes_tile": ['div', '_9a071_1bSFU _1nfka'],
             "current_size": ['div', '_17qy1 _1vryf _f8818_1X1F-']
         }
-        self.washed_titles = ['Pegasus Turbo', 'Max 90', 'max 90']
+        self.washed_titles = ['Pegasus Turbo', 'max 90', 'air max 90']
 
     def validate_bids(self, stockx_bids, available_bids):
         pass
@@ -107,20 +104,17 @@ class AllegroRobot(SiteRobot):
     def validate_offer(self, soup, offer_link):
         try:
             seller_name = soup.find_all(self.site_configuration['nick_class'][0],
-                                        self.site_configuration['nick_class'][1])[0].text.split('-')[0].strip()
+                                        self.site_configuration['nick_class'][1])[0].text.split(' ')[0].strip()
             auction_title = soup.find_all(self.site_configuration['title_class'][0],
                                           self.site_configuration['title_class'][1])[0].text
         except IndexError as e:
             print("IndexError: {}".format(e))
             return False
 
-        if seller_name == 'max-trade-ltd':
-            print("FOUND FAKE SELLER MAX TRADE LTD")
-
         if seller_name in self.fake_sellers:
             return False
         for washed in self.washed_titles:
-            if washed in auction_title.split():
+            if washed in auction_title.lower():
                 return False
 
         if 'lokalnie' in offer_link:

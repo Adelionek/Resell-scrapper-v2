@@ -11,67 +11,54 @@ import random
 class Stockx:
     def __init__(self):
         self.request_headers_list = [{
-            'authority': 'stockx.com',
-            'appos': 'web',
-            'dnt': '1',
-            'x-requested-with': 'XMLHttpRequest',
-            'authorization': '',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-            'appversion': '0.1',
-            'accept': '*/*',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search?s=yeezy',
-            'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '__cfduid=d33aca2c178cf77c7dc82df8c1d4efc371608985205; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; is_gdpr=true; stockx_ip_region=PL; stockx_session=eae1730b-247a-4b21-ae62-e4ea296020c7; _gcl_au=1.1.492563348.1608985207; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=false; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; _pk_ses.421.1a3e=*; IR_gbd=stockx.com; IR_9060=1608985207525%7C0%7C1608985207525%7C%7C; IR_PI=b0f9794f-4774-11eb-a8cd-42010a246625%7C1609071607525; _px3=14243d0248a0ce51d11929fd73d6fd2d225bc4dfb585a9b0266407e1ecf9e548:gquI5vDjnh6He8M1cb9YcE7HmKThfKkPIvXyylNwNiirQ8KE6fw3TGRMhvol2NQ3+BQJTAuBTyPkcNCa1TWsjg==:1000:RZhfO5sod++1Tg8EZsHLBun+74hjbW5qa9aRZMaxERPsZkQwoeV52uaiiruvfN8cm4d82fUvelJ9v+twyh71HaBq/YAM2iM3hfSL6F/9LKAZJH+ANkwznyy4A+nxeYMQV+0lRacsSEJjss+WKQwrqBYrrGNrBh+TdSg7kGrOQ90=; _scid=0fb54553-0561-47ca-8964-b81a225d5ddb; rskxRunCookie=0; rCookie=w96dlokp7mtm5dw9ji5hrokj1jznya; QuantumMetricUserID=99c87bd3d278bbc43d3056f315bdfafe; QuantumMetricSessionID=781f8db0fe2a27d4cf361e11cf21e686; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-26T12%3A20%3A08.796Z; stockx_dismiss_modal_expiration=2021-01-02T12%3A20%3A08.796Z; _pxvid=b42ae1e5-4774-11eb-87d7-0242ac12000c; _dd_s=rum=0&expire=1608986128443; _pk_id.421.1a3e=fc1c3dc2f0f11d7e.1608985207.1.1608985228.1608985207.; lastRskxRun=1608985228639; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220'
-        }, {
-            'authority': 'stockx.com',
-            'appos': 'web',
-            'dnt': '1',
-            'x-requested-with': 'XMLHttpRequest',
-            'authorization': '',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-            'appversion': '0.1',
-            'accept': '*/*',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search?s=yeezy',
-            'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '_pk_ses.421.1a3e=*; rskxRunCookie=0; _scid=d90a6d91-93b2-429f-bc83-4bd3c577c06c; IR_gbd=stockx.com; rCookie=w96dlokp7mtm5dw9ji5hrokj1jznya; _pxvid=703c7075-4775-11eb-ab27-0242ac12000d; QuantumMetricUserID=c0a422cfde80243b514873ee598ae910; QuantumMetricSessionID=93907da6ad0cc7b9839741d307dab455; _dd_s=rum=0&expire=1608986434933; _pk_id.421.1a3e=66abd08559be727a.1608985527.1.1608985536.1608985527.; lastRskxRun=1608985535712; IR_9060=1608985527733%7C0%7C1608985228828%7C%7C; IR_PI=b0f9794f-4774-11eb-a8cd-42010a246625%7C1609071927733; stockx_session=38bb618f-2ed5-430f-a048-6d5576db4067; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220',
-            'if-none-match': 'W/"33cea-ZwyFbWBgXEOP/q/pb8cc9RAsE2s"'
-        }, {
-            'authority': 'stockx.com',
-            'appos': 'web',
-            'dnt': '1',
-            'x-requested-with': 'XMLHttpRequest',
-            'authorization': '',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-            'appversion': '0.1',
-            'accept': '*/*',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search/sneakers?s=nike',
-            'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '_pk_ses.421.1a3e=*; rskxRunCookie=0; _scid=5b02445e-54cf-4231-8e19-caab8077c615; IR_gbd=stockx.com; rCookie=w96dlokp7mtm5dw9ji5hrokj1jznya; _pxvid=9323b48c-4775-11eb-94a3-0242ac120005; QuantumMetricUserID=f8371a05b898cc035342bff5cac3179a; QuantumMetricSessionID=98f984f54468e010a0935937f0856259; _dd_s=rum=0&expire=1608986492285; _pk_id.421.1a3e=6f677cb48415bd9c.1608985586.1.1608985593.1608985586.; stockx_homepage=sneakers; lastRskxRun=1608985593075; IR_9060=1608985586290%7C0%7C1608985535886%7C%7C; IR_PI=b0f9794f-4774-11eb-a8cd-42010a246625%7C1609071986290; stockx_session=3c4243e9-9383-4f52-883d-8c1cf23e7a3b'
-        }, {
-            'authority': 'stockx.com',
-            'appos': 'web',
-            'dnt': '1',
-            'x-requested-with': 'XMLHttpRequest',
-            'authorization': '',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-            'appversion': '0.1',
-            'accept': '*/*',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': 'https://stockx.com/search?s=yeezy',
-            'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-            'cookie': '__cfduid=d133b014e376c63f8ac61346267df45e31607943701; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; _pxvid=bff6c9f2-3dfb-11eb-8e7c-0242ac12000e; stockx_session=7675c383-f625-4efb-9789-034f4736002f; _gcl_au=1.1.637044575.1607943704; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=false; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; IR_gbd=stockx.com; _pk_ses.421.1a3e=*; _scid=b8207a25-2fe3-42fa-a1c1-2949a03bd147; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2020-12-14T11%3A01%3A45.893Z; stockx_dismiss_modal_expiration=2020-12-21T11%3A01%3A45.892Z; rskxRunCookie=0; rCookie=2xu1o2c58lne31knzc5sbkim2rr2c; QuantumMetricUserID=d1b57f90c8868ae9f8fd39eecd6dda51; QuantumMetricSessionID=5bed916dd1af498daaa501a02d3a44ed; is_gdpr=true; stockx_ip_region=PL; _px3=e210fc51c33ae2f017dc8c7180955cc0a366bf39138c01191a4583d35853f611:3g7eH4G8pr5D8IKEdHWJ21igfgAr6LkUenm3kVSfhidVYQm6PUwsQXXCBdbg+B+eHL+2Gl5Vl0gNotWloNnD6g==:1000:TR5pkraRdHF30Aii/4jU4zXAsj4YLcEA8cP/ncw2SpTt1YMl00Sa8kbC07dzYNkyqGRv44xKRO/hJLjdyWlNG/wmWQI4xxkBgUbw+wY7UDBmCf8tkIj7W43WzN8KNZK59ztl+51JJ9CNpbKHwjrHfkdbxo0ffDoJqJtXOHSL4Y8=; _dd_s=rum=0&expire=1607945191992; _pk_id.421.1a3e=1d76a011dbbbd062.1607943705.1.1607944292.1607943705.; lastRskxRun=1607944292165; IR_9060=1607943718833%7C0%7C1607943704738%7C%7C; IR_PI=c113add8-3dfb-11eb-a8cd-42010a246625%7C1608030118833; __cfduid=d1ad1006b53683ef23e2202f8885708301606496220'
-        }]
+  'authority': 'stockx.com',
+  'appos': 'web',
+  'dnt': '1',
+  'x-requested-with': 'XMLHttpRequest',
+  'authorization': '',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+  'appversion': '0.1',
+  'accept': '*/*',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  'referer': 'https://stockx.com/search?s=yeezy',
+  'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie': '__cfduid=dea078ea4978b641ec04a5d67dd6a590c1609163239; cf_clearance=04f91b7ddba96e9d76a8ab5014b0fe47073cab5e-1609710490-0-250; ajs_user_id=%22d146558e-7e5e-11ea-b5c9-124738b50e12%22; ajs_anonymous_id=%225275da7b-9a4b-40e2-94b2-8be38f057935%22; _scid=d2c9f3fd-b945-4ea0-8925-788746169130; QuantumMetricUserID=da2a9aec94e13ecb63fa5080edfc89d4; _pxvid=0cb31dd7-4e16-11eb-a9aa-0242ac120017; _gcl_au=1.1.319618014.1609714229; rskxRunCookie=0; rCookie=53iay4clxv6ii9izj3yunkjhqanpx; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; is_gdpr=true; stockx_ip_region=PL; stockx_session=be5290bc-9da3-46d7-a254-cdf8a1115118; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=true; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; _px3=886467362b0d37a4b15e0c9be5e90636a56c3f508183fe7d817141a820395700:V3FQ76ZxksbCJ9dmcHXXYA+SQl/x1sgroOHWlrgswbSGdfxunwuwoJouAb09hWWG3QvLZRQpu/fud+9xm1La5A==:1000:C/OFoQJ7pv6o1K/RGJOd/wNOiHznFfxZ8oaEnf1JaVdZV5z/RnkvbAifkYGHCD8En5tBTvyEW4Xj6fYdMAxJrgVImf03xlDDMAGlyOgLnZJWbO9G89GO2KnCpRONonEAyPweCYUE8WD19k9S8hl6brqcBC2Ygb519bOKjPfLoac=; IR_gbd=stockx.com; IR_9060=1609762686717%7C0%7C1609762686717%7C%7C; IR_PI=3572472e-4913-11eb-a8cd-42010a246625%7C1609849086717; _pk_ses.421.1a3e=*; QuantumMetricSessionID=bae142b49883a25b379ad7efdd81d514; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2021-01-04T12%3A18%3A14.758Z; stockx_dismiss_modal_expiration=2021-01-11T12%3A18%3A14.755Z; _dd_s=rum=0&expire=1609763611208; _pk_id.421.1a3e=e52f58f246d1e66b.1609163243.17.1609762711.1609762687.; lastRskxRun=1609762711641; __cfduid=d7f59d621ac9b56bb0492f438fd4c5da81609098328'
+}, {
+  'authority': 'stockx.com',
+  'appos': 'web',
+  'dnt': '1',
+  'x-requested-with': 'XMLHttpRequest',
+  'authorization': '',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+  'appversion': '0.1',
+  'accept': '*/*',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-dest': 'empty',
+  'referer': 'https://stockx.com/search?s=yeezy',
+  'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie': '__cfduid=d3c87e36efe0e1ae9159ffba984db7da91609762840; stockx_homepage=sneakers; stockx_market_country=PL; _pxvid=43140dac-4e87-11eb-a268-0242ac12000d; stockx_session=b20926f8-45f6-4ab7-811c-cc28b53f8c9b; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=true; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; _gcl_au=1.1.1492549214.1609762846; stockx_selected_currency=EUR; language_code=en; stockx_selected_locale=en; stockx_selected_region=PL; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2021-01-04T12%3A20%3A46.531Z; stockx_dismiss_modal_expiration=2022-01-04T12%3A20%3A46.529Z; IR_9060=1609762847269%7C0%7C1609762847269%7C%7C; IR_gbd=stockx.com; _pk_id.421.1a3e=4268a045481cd7ef.1609762847.1.1609762847.1609762847.; _pk_ses.421.1a3e=*; IR_PI=45ff693c-4e87-11eb-a8cd-42010a246625%7C1609849247269; _scid=deaece4f-7346-46c5-987e-2b4dcae734d0; QuantumMetricSessionID=9a5e770cca9495331067539854e02e7b; QuantumMetricUserID=3e93681e4e3aa1bfa79e06a8d1c6bdca; _dd_s=rum=0&expire=1609763749817; is_gdpr=true; stockx_ip_region=PL; _px3=a394340fda6f03b0bbaf13173d7d0e193605b58629bf52645496d4a97e8b5d20:RR4aZ4G/UZp/+ec0s9PN1s7+Cttn67clZMjC9hDsUBCsijevWk92i6zljAAqLOoertNGb5OCOySVAL1+cqGbQg==:1000:vaq9KzxH1glfTdiePGeykiygNujgpxAXtZdk9kTPWL8wyYycHbXcefn2yj6dtepJfr6iaf62D1QEGrJWS+yfmqLcLz8Kzc/nhjRs9BxUzmYIW7D1v2W04XQ+Cym5tSfuv86kYDSmQGltSEU45379dKFKpX80TqD4+UZvr42FDvE=; __cfduid=d7f59d621ac9b56bb0492f438fd4c5da81609098328',
+  'if-none-match': 'W/"342da-GwbNDhq/Sx71+rstkRUOwU22nXU"'
+},
+            {
+                'authority': 'stockx.com',
+                'appos': 'web',
+                'dnt': '1',
+                'x-requested-with': 'XMLHttpRequest',
+                'authorization': '',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+                'appversion': '0.1',
+                'accept': '*/*',
+                'sec-fetch-site': 'same-origin',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-dest': 'empty',
+                'referer': 'https://stockx.com/search?s=yeezy1',
+                'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
+                'cookie': '__cfduid=d1c9f3a262a6302c462c786e4bcd566bf1609770609; stockx_homepage=sneakers; stockx_market_country=PL; _pxvid=59d391b4-4e99-11eb-8947-0242ac120003; stockx_session=4144714b-e350-4045-bc36-4369e89d112f; _gcl_au=1.1.1417446819.1609770612; below_retail_type=; bid_ask_button_type=; brand_tiles_version=v1; browse_page_tile_size_update_web=true; bulk_shipping_enabled=true; default_apple_pay=false; multi_edit_option=beatLowestAskBy; intl_payments=true; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=true; show_all_as_number=false; show_bid_education=v2; show_bid_education_times=1; show_how_it_works=true; show_watch_modal=false; pdp_refactor_web=undefined; recently_viewed_web_home=false; ops_delay_messaging_pre_checkout_ask=false; ops_delay_messaging_post_checkout_ask=false; ops_delay_messaging_selling=false; ops_delay_messaging_buying=false; ops_delay_messaging_ask_status=false; ops_delay_messaging_pre_checkout_buy=false; ops_delay_messaging_bid_status=false; ops_delay_messaging_post_checkout_buy=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v0; IR_gbd=stockx.com; _pk_ses.421.1a3e=*; _scid=aed02e45-1045-47e4-b2f8-39829b236763; QuantumMetricSessionID=d28be2aa370e28158a59a22b94cab246; QuantumMetricUserID=b836313567d8f2acc8836a42078b9d67; rskxRunCookie=0; rCookie=53iay4clxv6ii9izj3yunkjhqanpx; stockx_selected_currency=EUR; language_code=en; stockx_selected_locale=en; stockx_selected_region=PL; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2021-01-04T14%3A30%3A19.717Z; stockx_dismiss_modal_expiration=2022-01-04T14%3A30%3A19.717Z; is_gdpr=true; stockx_ip_region=PL; stockx_product_visits=2; IR_9060=1609770623536%7C0%7C1609770613601%7C%7C; IR_PI=5b1d6dda-4e99-11eb-a8cd-42010a246625%7C1609857023536; _dd_s=rum=0&expire=1609771536524; _pk_id.421.1a3e=2febdcc4f266d763.1609770614.1.1609770637.1609770614.; lastRskxRun=1609770636727'
+            }
+        ]
         self.request_headers = self.request_headers_list[0]
         self.product_info_uri = 'https://stockx.com/api/browse?&_search=PID&dataType=product&country=PL'
         self.product_bids_uri = "https://stockx.com/api/products/PRODUCT/activity?state=300&currency=EUR&limit=1000" \
@@ -159,7 +146,7 @@ class Stockx:
         except HTTPError as http_err:
             print(f'HTTP error occurred: {http_err}')
             if url_resp.status_code in [403, 502]:
-                self.header_num = (self.header_num + 1) % 4
+                self.header_num = (self.header_num + 1) % 3
                 self.request_headers = self.request_headers_list[self.header_num]
                 # self.refresh_stockx_cookies()
                 # print('calling api from scraperapi')

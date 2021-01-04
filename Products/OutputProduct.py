@@ -10,7 +10,7 @@ class OutputProduct(Product):
         self.stockx_link = stockx_link
         self.available_sizes = {'EU': [], 'US': []}
         self.highest_bid = None
-        self.highest_available_bids = []
+        self.highest_bids = {'available': dict(), 'all': dict()}
         self.retail = None
         self.offer_price = None
         self.payout = None

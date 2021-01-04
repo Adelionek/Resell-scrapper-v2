@@ -12,7 +12,8 @@ def switch(brand, type):
         'nike_W': {
             'pattern': nike,
             'file': 'D:\\Projects\\Python\\ResellScraperv2\\txt\\nike_W_PID_not_available.txt',
-            'size_chart': nike_W
+            'size_chart': nike_W,
+            'size_chart_GS': nike_W_GS
         },
         'adidas_M': {
             'pattern': adidas,

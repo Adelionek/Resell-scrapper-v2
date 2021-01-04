@@ -10,6 +10,7 @@ class StockxProduct(Product):
         self.lastSales = None
         self.stockx_link = stockx_link
         self.stockx_pid = stockx_pid
+        self.gender = None
 
     def check_available_bids(self):
         pass

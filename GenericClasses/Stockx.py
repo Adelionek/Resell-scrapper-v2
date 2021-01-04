@@ -81,8 +81,8 @@ class Stockx:
         if not self.is_pid_available(pid):
             # print('Skipping pid bc its not on stockX {}'.format(pid))
             return None
-        url = self.product_info_uri.replace('PID', pid.replace(' ', '%20'))
 
+        url = self.product_info_uri.replace('PID', pid.replace(' ', '%20'))
         json_response = self.make_request(url, self.payload, self.request_headers)
         stockx_product = None
         if not json_response:
@@ -104,6 +104,7 @@ class Stockx:
                     stockx_pid = product['id']
                     stockx_product = StockxProduct(product['styleId'], product['title'], product['brand'],
                                                    retail_pl, stockx_link, stockx_pid)
+                    stockx_product.gender = product['gender']
                     return stockx_product
             except AttributeError as e:
                 print("Get stockx product info error: {}".format(e))

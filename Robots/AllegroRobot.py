@@ -185,8 +185,10 @@ class AllegroRobot(SiteRobot):
         source_product = SourceProduct(pid, auction_title, brand, 'Allegro', offer_link, price)
         source_product.available_sizes['EU'] = available_sizes
         # print(offer_link)
-        source_product.available_sizes['US'] = source_product.eu_to_us(available_sizes, brand)
 
+        source_product.available_sizes['US'] = source_product.eu_to_us(available_sizes, brand)
+        if source_product.available_sizes['US'] is None:
+            print(1)
         return source_product
 
     def create_output_product(self, source_product, stockx_product, available_bids):
@@ -219,9 +221,18 @@ class AllegroRobot(SiteRobot):
             print(e)
             pass
 
-        for bids in available_bids[:3]:
-            # TODO ADD AS DICT size: bid
-            output_product.highest_available_bids.append(bids['localAmount'])
+        for bid in available_bids[:3]:
+            pos = output_product.highest_bids['available']
+            if bid['shoeSize'] not in pos.keys():
+                pos[bid['shoeSize']] = [bid['localAmount']]
+            else:
+                pos[bid['shoeSize']].append(bid['localAmount'])
+        for bid in stockx_product.available_bids[:3]:
+            pos = output_product.highest_bids['all']
+            if bid['shoeSize'] not in pos.keys():
+                pos[bid['shoeSize']] = [bid['localAmount']]
+            else:
+                pos[bid['shoeSize']].append(bid['localAmount'])
 
         return output_product
 
@@ -241,6 +252,8 @@ class AllegroRobot(SiteRobot):
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
                     continue
+                if "buty-nike-air-force-1-mid-gs" in offer_link:
+                    print(1)
                 is_offer_valid = self.validate_offer(offer_soup, offer_link)
                 if not is_offer_valid:
                     continue
@@ -255,7 +268,7 @@ class AllegroRobot(SiteRobot):
                 stockx_product = self.stockxManager.get_stockx_product_info(source_product.product_id)
                 if not stockx_product:
                     continue
-                pids_processed = pids_processed + 1
+                pids_processed += 1
 
                 # get stockX product bids
                 stockx_all_product_bids = self.stockxManager.get_stockx_product_bids(stockx_product)
@@ -265,12 +278,21 @@ class AllegroRobot(SiteRobot):
                     stockx_product.available_bids = stockx_all_product_bids
 
                 # check if there are available bids
-                available_bids = [bid for bid in stockx_all_product_bids if bid['shoeSize']
-                                  in source_product.available_sizes['US']]
+                #SWITCH ON GENDER
+
+                if stockx_product.gender == 'child':
+                    gs_sizes = source_product.eu_to_gs(source_product.available_sizes['EU'], source_product.brand)
+                    available_bids = [bid for bid in stockx_all_product_bids if bid['shoeSize']
+                                      in gs_sizes]
+                else:
+                    available_bids = [bid for bid in stockx_all_product_bids if bid['shoeSize']
+                                      in source_product.available_sizes['US']]
                 if not available_bids:
                     continue
 
                 # create output product
+
+                #TODO HANDLE GS SIZE in output product.Convert eu to GS.Take info from gender iin source_product
                 output_product = self.create_output_product(source_product, stockx_product, available_bids)
                 if output_product:
                     print(json.dumps(output_product.__dict__, indent=1))

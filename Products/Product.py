@@ -29,8 +29,29 @@ class Product:
                     us_array.append(nike_M['EU_US'][size])
                 except Exception as e:
                     print("size:{} eu_to_us exception".format(e))
-
         return us_array
+
+    def eu_to_gs(self, size_array, brand):
+        size_chart = switch(brand, 'size_chart_GS')
+        gs_array = []
+        for size in size_array:
+            try:
+                gs_array.append(size_chart['EU_GS'][size])
+            except Exception as e:
+                print("size:{} eu_to_us exception".format(e))
+
+        return gs_array
+
+    def gs_to_eu(self, size_array, brand):
+        size_chart = switch(brand, 'size_chart_GS')
+        eu_array = []
+        for size in size_array:
+            try:
+                eu_array.append(size_chart['GS_EU'][size])
+            except Exception as e:
+                print("size:{} eu_to_us exception".format(e))
+
+        return eu_array
 
 
 

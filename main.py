@@ -1,17 +1,21 @@
-from Robots.AllegroRobot import AllegroRobot
+from Robots.AllegroRobot import *
 # import thread
+#
+#
+AllegroRobot = AllegroRobotClass()
+AllegroRobot.start_process(2, 50, 'nike_M')
 
-# AllegroRobot = AllegroRobot()
-# AllegroRobot.start_process(56, 100, 'nike_M')
+# AllegroRobotNikeW = AllegroRobotClass()
+# AllegroRobotNikeW.start_process(1, 50, 'nike_W')
 
-AllegroRobot = AllegroRobot()
-AllegroRobot.start_process(1, 50, 'nike_W')
+Allegro_adidas = AllegroRobotClass()
+Allegro_adidas.start_process(2, 50, 'adidas_M')
 
-# Allegro_adidas = AllegroRobot()
-# Allegro_adidas.start_process(1, 100, 'adidas_M')
-
-# Allegro_new_balance = AllegroRobot()
-# Allegro_new_balance.start_process(1, 100, 'new_balance_M')
-
-# Allegro_new_balance = AllegroRobot()
-# Allegro_new_balance.start_process(16, 100, 'reebok_M')
+Allegro_adidas1 = AllegroRobotClass()
+Allegro_adidas1.start_process(1, 50, 'adidas_W')
+#
+# # Allegro_new_balance = AllegroRobotClass()
+# # Allegro_new_balance.start_process(10, 50, 'newBalance_M')
+#
+# Allegro_reebok = AllegroRobotClass()
+# Allegro_reebok.start_process(1, 50, 'reebok_M')

@@ -3,48 +3,46 @@ import time
 from Robots.SiteRobot import SiteRobot
 from Products.SourceProduct import SourceProduct
 from Products.OutputProduct import OutputProduct
-from Const.Patterns import *
 from GenericFunctions.Functions import *
 from Const.Currency import *
 import re
 import json
 
 
-class AllegroRobot(SiteRobot):
+class AllegroRobotClass(SiteRobot):
     def __init__(self):
         super().__init__(request_headers={
             'authority': 'allegro.pl',
-            'accept': 'application/vnd.allegro.favourites.v1+json',
-            'dnt': '1',
             'dpr': '2',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
-            'viewport-width': '865',
-            'service-name': 'opbox-showoffer-summary',
+            'viewport-width': '750',
+            'dnt': '1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': 'Mozilla/5.0 (X11; CrOS i686 1660.57.0) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.46 Safari/535.19',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'sec-fetch-site': 'same-origin',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-dest': 'empty',
-            'referer': 'https://allegro.pl/oferta/maska-na-twarz-ochronna-maseczka-kn95-filtr-kn95-9190663571?bi_c=C-maseczki-zdrowie-2020&',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-dest': 'document',
+            'referer': 'https://allegro.pl/oferta/fiskars-zestaw-5-nozy-noz-blok-857197-legendarny-7582593446?reco_id=36805f06-7b4e-11eb-8ac9-0c42a10e6d08&sid=e87b00735b7a626d8cf4ab04068da77c41db6208f84b5c14d8d681dddc612d88&bi_m=mpage&',
             'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-
-            'cookie': '_cmuid=gx60jrxk-gpxc-510p-3twz-5gfjg2rnr0d4; _ga_2FTJ836HTM=GS1.1.1607275481.36.1.1607275611.6; _ga=GA1.1.1671861360.1606556139; RT="sl=5&ss=kidebk9f&tt=7bu&z=1&dm=allegro.pl&si=11639adf-aa61-4794-bc3c-9d93a4ebf91b&obo=2&rl=1"; _gcl_au=1.1.1811507559.1607275614'
+            'cookie': '_ga=GA1.2.499925289.1615639123; _gat_UA-2827377-1=1; cartUserId=ba3gh4rr-ajuu-5bhd-cuc3-f48d7js56bjm; _gcl_au=1.1.1268673892.1615639122; datadome=MZf0jOwdebRRGEpdfhgXyLPbphnhEt2roJ~7eYu9_1tLk_nSaeyaX5AY~fixjrBnPbYeBVv0g4APovElWtOTH4Bj2zo8nnmHxW-1zo6vBO; _ga_2FTJ836HTM=GS1.1.1615639122.1.0.1615639122.60; _gid=GA1.2.696275626.1615639123; __gfp_64b=zFN7fJwNZnUtvyp5w4rSjWSRqNV0KM0hgP5iLe4jWRL.x7|1615639121; _cmuid=ba3gh4rr-ajuu-5bhd-cuc3-f48d7js56bjm;'
         })
         self.pages = {
-            "nike_M": "https://allegro.pl/kategoria/meskie-sportowe-257929?stan=nowe&dostawa-z-polski=tak&oryginalne"
-                      "-opakowanie-producenta=pude%C5%82ko&marka=Nike&order=n&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
-            "nike_W": "https://allegro.pl/kategoria/damskie-sportowe-257903?marka=Nike&dostawa-z-polski=tak&order=n&"
-                      "freeReturn=1&stan=nowe&bmatch=dict20110-a-ctx-fd-fas-1-5-1125",
-            'adidas_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=adidas&'
-                        'freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&'
-                        'bmatch=dict20120-m-ctx-fas-1-4-1203&order=n',
-            'adidas_W': 'https://allegro.pl/kategoria/damskie-sportowe-257903?marka=adidas&dostawa-z-polski=tak&'
-                        'freeReturn=1&stan=nowe&order=n&bmatch=dict201214-ctx-fas-1-2-1218',
-            'new_balance_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20'
-                             'Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&b'
-                             'match=dict20120-m-ctx-fas-1-2-1203&order=',
+            "nike_M": "https://allegro.pl/kategoria/obuwie-meskie-532?bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&"
+                      "dostawa-z-polski=tak&marka=Nike&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n",
+            "nike_W": "https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=Nike&"
+                      "oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112",
+            'adidas_M': 'https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112'
+                        '&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko',
+            'adidas_W': 'https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas'
+                        '&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112',
+            'newBalance_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20'
+                            'Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&b'
+                            'match=dict20120-m-ctx-fas-1-2-1203&order=',
             'reebok_M': "https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&oryginalne-opakowanie"
                         "-producenta=pude%C5%82ko&order=n&bmatch=dict201214-ctx-fas-1-2-1218&stan=nowe"
                         "&stan=nowe%20bez%20metki&stan=nowe%20z%20defektem&marka=Reebok"
         }
+        # self.fake_sellers = []
         self.fake_sellers = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB', 'world-shop',
                              'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324', 'Tzmark',
                              'GTshoes', 'AlleButy1819', 'Eski_Sports', 'ButicSport', 'Razor69996', 'Sneakers_On_Fire',
@@ -62,21 +60,20 @@ class AllegroRobot(SiteRobot):
                              'NaGiewoncie1409', 'CalceolarPL', 'KustoSeller32', 'alleo-promocje', 'chentaozo350604',
                              'luzhuangly653558', 'qiongyouyv098054', 'AnfiniHardaway', 'Janutzboots', 'Martunia_91',
                              'tarasofobia', 'ntulppma', 'Buty_UK', 'saleneo-com', 'saleneo_pl', 'dostawa-w-2tyg',
-                             '4F_Sklep', 'cool_shoes_1993', 'Client:58508393', 'super_sneakers', 'Stasic77']
+                             '4F_Sklep', 'cool_shoes_1993', 'Client:58508393', 'super_sneakers', 'Stasic77',
+                             'zakupowo_24', 'Fenglin', 'Weilin', 'Butorajshop', 'kongjing1', 'saleneo_com', 'LoveSales',
+                             'saleneo-pl']
 
         self.site_configuration = {
-            "title_class": ['h1', '_9a071_1Ux3M _9a071_3nB-- _9a071_1R3g4 _9a071_1S3No'],
-            "nick_class": ['a', '_w7z6o _15mod _9a071_1BlBd'],
-            "price": ['div', '_1svub _lf05o _9a071_2MEB_'],
+            "title_class": ['h1', '_1s2v1 _1djie _4lbi0'],
+            "nick_class": ['a', '_w7z6o _15mod _9a071_3tKtu'],
+            "price": ['div', '_1svub _lf05o _9a071_3SxcJ'],
             "ship_country": ['div', '_15mod _1vryf _34279_13Rv4'],
             "offer_title": ['h2', 'mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0'],
-            "sizes_tile": ['div', '_9a071_1bSFU _1nfka'],
+            "sizes_tile": ['div', '_9a071_2llTZ _1nfka'],
             "current_size": ['div', '_17qy1 _1vryf _f8818_1X1F-']
         }
         self.washed_titles = ['Pegasus Turbo', 'max 90', 'air max 90']
-
-    def validate_bids(self, stockx_bids, available_bids):
-        pass
 
     def get_available_sizes(self, soup):
         available_sizes = []
@@ -187,8 +184,7 @@ class AllegroRobot(SiteRobot):
         # print(offer_link)
 
         source_product.available_sizes['US'] = source_product.eu_to_us(available_sizes, brand)
-        if source_product.available_sizes['US'] is None:
-            print(1)
+
         return source_product
 
     def create_output_product(self, source_product, stockx_product, available_bids):
@@ -236,9 +232,8 @@ class AllegroRobot(SiteRobot):
 
         return output_product
 
-    # brand example: adidas_M
-
     def start_process(self, start_page, end_page, brand):
+        # time.sleep(30)
         self.stockxManager.pids_not_available = open(switch(brand, 'file'), 'r').readlines()
         for p in range(start_page, end_page):
             self.stockxManager.file = open(switch(brand, 'file'), 'a')
@@ -252,8 +247,6 @@ class AllegroRobot(SiteRobot):
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
                     continue
-                if "buty-nike-air-force-1-mid-gs" in offer_link:
-                    print(1)
                 is_offer_valid = self.validate_offer(offer_soup, offer_link)
                 if not is_offer_valid:
                     continue
@@ -277,25 +270,47 @@ class AllegroRobot(SiteRobot):
                 else:
                     stockx_product.available_bids = stockx_all_product_bids
 
-                # check if there are available bids
-                #SWITCH ON GENDER
+                # SWITCH ON GENDER
+                checked_sizes = check_sizes_on_gender(stockx_product, source_product, brand)
+                available_bids = [bid for bid in stockx_all_product_bids if bid['shoeSize']
+                                  in checked_sizes]
 
-                if stockx_product.gender == 'child':
-                    gs_sizes = source_product.eu_to_gs(source_product.available_sizes['EU'], source_product.brand)
-                    available_bids = [bid for bid in stockx_all_product_bids if bid['shoeSize']
-                                      in gs_sizes]
-                else:
-                    available_bids = [bid for bid in stockx_all_product_bids if bid['shoeSize']
-                                      in source_product.available_sizes['US']]
                 if not available_bids:
                     continue
 
                 # create output product
-
-                #TODO HANDLE GS SIZE in output product.Convert eu to GS.Take info from gender iin source_product
                 output_product = self.create_output_product(source_product, stockx_product, available_bids)
                 if output_product:
                     print(json.dumps(output_product.__dict__, indent=1))
+
             self.stockxManager.file.close()
             print("pids processed: {}/{}".format(pids_processed, all_offers))
-    #  self.stockxManager.pids_not_available.close()
+
+
+def check_sizes_on_gender(stockx_product, source_product, brand):
+    gender = stockx_product.gender
+    if gender == "men" and "M" not in brand:
+        print('found wrong gender')
+        correct_brand = brand.split('_')[0] + '_M'
+        men_sizes = source_product.eu_to_us(source_product.available_sizes['EU'], correct_brand)
+        return men_sizes
+    elif gender == "women" and "W" not in brand:
+
+        if 'reebok' in brand or 'new_balance' in brand:
+            print('NOT SUPPORTED')
+            return source_product.available_sizes['US']
+
+        print('found wrong gender')
+        correct_brand = brand.split('_')[0] + '_W'
+        women_sizes = source_product.eu_to_us(source_product.available_sizes['EU'], correct_brand)
+        return women_sizes
+    elif gender == "child" and "GS" not in brand:
+        if 'adidas' in brand or 'reebok' in brand or 'new_balance' in brand:
+            print('NOT SUPPORTED')
+            return source_product.available_sizes['US']
+        print('found wrong gender')
+        # correct_brand = brand.split('_')[0] + '_GS'
+        gs_sizes = source_product.eu_to_gs(source_product.available_sizes['EU'], brand)
+        return gs_sizes
+    else:
+        return source_product.available_sizes['US']

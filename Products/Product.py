@@ -38,7 +38,8 @@ class Product:
             try:
                 gs_array.append(size_chart['EU_GS'][size])
             except Exception as e:
-                print("size:{} eu_to_us exception".format(e))
+                # TODO primtlink
+                print("size:{} eu_to_gs exception".format(e))
 
         return gs_array
 
@@ -49,7 +50,7 @@ class Product:
             try:
                 eu_array.append(size_chart['GS_EU'][size])
             except Exception as e:
-                print("size:{} eu_to_us exception".format(e))
+                print("size:{} gs_to_eu exception".format(e))
 
         return eu_array
 

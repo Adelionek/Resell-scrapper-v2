@@ -17,7 +17,7 @@ def get_mp3_link(driver):
     return audio.attrs['src']
 
 
-def recognize_from_mp3(file_name):
+def recognize_text_from_mp3(file_name):
     src = "./{0}{1}".format(file_name, '.mp3')
     sound = AudioSegment.from_mp3(src)
     sound.export("./audio_wav.wav", format="wav")
@@ -26,20 +26,21 @@ def recognize_from_mp3(file_name):
 
     with file_audio as source:
         audio_text = r.record(source)
-        print(type(audio_text))
         return r.recognize_google(audio_text)
 
 
 def download_mp3(link, file_name):
     r = requests.get(link)
-    open('./' + file_name + '.mp3', 'wb').write(r.content)
+    with open('./' + file_name + '.mp3', 'wb') as filetowrite:
+        filetowrite.write(r.content)
+    # print('./' + file_name + '.mp3' + 'file saved')
 
 
 def move_mouse():
     pyautogui.moveTo(965, 199, 3, pyautogui.easeInBounce)
-    pyautogui.moveTo(1000, 1500, 3, pyautogui.easeInBounce)
-    pyautogui.moveTo(100, 614, 3, pyautogui.easeInBounce)
-    pyautogui.moveTo(2000, 650, 3, pyautogui.easeInBounce)
+    pyautogui.moveTo(1000, 1500, 2.5, pyautogui.easeInBounce)
+    pyautogui.moveTo(100, 614, 2, pyautogui.easeInBounce)
+    # pyautogui.moveTo(2000, 650, 3, pyautogui.easeInBounce)
 
 
 def refresh_cookies(driver):
@@ -53,9 +54,29 @@ def refresh_cookies(driver):
     return new_cookie
 
 
+def get_digits_from_page(driver):
+    mp3_link = get_mp3_link(driver)
+    download_mp3(mp3_link, 'mp3audio')
+    recognized_text = recognize_text_from_mp3('mp3audio')
+    print(recognized_text)
+    recognized_text = recognized_text.replace('for', '4').replace('to', '2').replace('gate', '8')
+    digits = re.findall(r'\d+', recognized_text)
+    digits = "".join(digits)
+    print(digits)
+
+    if len(digits) == 6:
+        print("Digits recognized successfully")
+        return digits
+    else:
+        print("Wrong recognized digits, trying again...")
+        pyautogui.moveTo(1332, 758, 2, pyautogui.easeInQuad)
+        pyautogui.click()
+        time.sleep(9)
+        get_digits_from_page(driver)
+
 def start_process():
 
-    driver = webdriver.Chrome(executable_path="../webDrivers/chromedriver.exe")
+    driver = webdriver.Chrome(executable_path=os.path.join(os.getcwd(), 'webDrivers', 'chromedriver.exe'))
     driver.get("https://allegro.pl/")
     time.sleep(2)
     driver.refresh()
@@ -83,34 +104,28 @@ def start_process():
     frame = driver.find_element_by_tag_name('iframe')
     driver.switch_to.frame(frame)
 
-    # download .mp3 file
-    mp3_link = get_mp3_link(driver)
-    download_mp3(mp3_link, 'mp3audio')
-    recognized_text = recognize_from_mp3('mp3audio')
-    digits = re.findall(r'\d+', recognized_text)
-    digits = "".join(digits)
-
-    if len(digits) == 6:
-        print("MAMY TO")
-    else:
-        print("NIE DZIALA")
+    digits = get_digits_from_page(driver)
+    time.sleep(3)
 
     # move to enter voice text
     pyautogui.moveTo(1213, 996, 2, pyautogui.easeInQuad)
     pyautogui.click()
 
     pyautogui.write(digits, interval=0.5)
+    print('writing digits')
 
     # move and click OK
     pyautogui.moveTo(1219, 1127, 2, pyautogui.easeInQuad)
     pyautogui.click()
+    print('clicking ok and sleeping...')
+    time.sleep(5)
 
-    return refresh_cookies(driver)
+    print('generating new cookies')
+    new_cookies = refresh_cookies(driver)
+    print('new cookies generated')
+    driver.close()
+    return new_cookies
 
-
-class cookieRefresher():
-    def __init__(self):
-        new_cookies =
 
 # soup = BeautifulSoup(driver.page_source, 'html.parser')
 # iframe = soup.find('iframe')

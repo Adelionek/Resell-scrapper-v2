@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 import random
 from selenium import webdriver
 import os
-from selenium.webdriver.chrome.options import Options
+from cookies import RefreshCookies
+
 
 def open_ua_file():
     file_path = os.path.join(os.getcwd(), 'txt', 'userAgents.txt')
@@ -30,29 +31,36 @@ class Soup:
         retry_times = 0
         while True:
             try:
-                rand = random.randint(1, 1)
+                rand = random.randint(2, 10)
                 self.switch_ua()
                 # link_req = requests.request("GET", link, headers=headers, data=payload, proxies=self.proxies[rand])
-                link_req = requests.request("GET", link, headers=headers, data=payload)
                 print('sleeping for {0} sec...'.format(rand))
                 time.sleep(rand)
+                link_req = requests.request("GET", link, headers=headers, data=payload)
                 link_content = link_req.text
                 if link_req.status_code == 200:
-                    print('passed')
+                    # print('passed')
                     soup = BeautifulSoup(link_content, 'html.parser')
                     return soup
                 else:
-                    print("not passed")
-
                     while True:
+                        print("not passed")
+                        new_cookie = RefreshCookies.start_process()
+                        self.request_headers['cookie'] = new_cookie
+                        print('new cookie applied')
+                        time.sleep(2)
+
                         # new_link = "http://api.scraperapi.com?api_key=64f35214a3ab1ce53b4d73f88b4f750c&url={}".format(link)
                         self.switch_ua()
-                        link_req = requests.request("GET", link, headers=headers, data=payload)
+                        link_req = requests.request("GET", link, headers=self.request_headers, data=payload)
                         link_content = link_req.text
                         soup = BeautifulSoup(link_content, 'html.parser')
+                        print("Status code: " + str(link_req.status_code))
                         if link_req.status_code == 200:
-                            # print('passed')
+                            print('passed after fail')
                             return soup
+                        # elif link_req.status_code == 429:
+                        #     return None
                         else:
                             pass
 

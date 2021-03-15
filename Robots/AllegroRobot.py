@@ -145,6 +145,9 @@ class AllegroRobotClass(SiteRobot):
         uri = page_link + '&p={}'.format(page)
         print('PAGE: {} URI: {}'.format(page, uri))
         soup = self.siteSoup.make_soup(uri)
+        if not soup:
+            return None
+
         # TODO ADD IF
         offers = soup.find_all(self.site_configuration['offer_title'][0], self.site_configuration['offer_title'][1])
         if not offers:
@@ -239,6 +242,9 @@ class AllegroRobotClass(SiteRobot):
             self.stockxManager.file = open(switch(brand, 'file'), 'a')
             brand_page = self.pages.get(brand)
             offer_links = self.get_product_list(brand_page, p)
+            if not offer_links:
+                print('Didnt create soup for offer links, continuing')
+                continue
             pids_processed = 0
             all_offers = len(offer_links)
             for offer_link in offer_links:

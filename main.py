@@ -3,7 +3,7 @@ from Robots.AllegroRobot import *
 #
 #
 AllegroRobot = AllegroRobotClass()
-AllegroRobot.start_process(2, 50, 'nike_M')
+AllegroRobot.start_process(10, 50, 'nike_M')
 
 # AllegroRobotNikeW = AllegroRobotClass()
 # AllegroRobotNikeW.start_process(1, 50, 'nike_W')

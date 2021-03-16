@@ -139,6 +139,7 @@ class Stockx:
     def get_last_sales(self, stockx_product):
         pass
 
+    # TODO switch user agents
     def make_request(self, link, payload, headers):
         try:
             # time.sleep(1)

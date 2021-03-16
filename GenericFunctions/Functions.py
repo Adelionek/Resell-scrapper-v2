@@ -38,3 +38,5 @@ def switch(brand, type):
         }
     }
     return switcher[brand][type]
+
+

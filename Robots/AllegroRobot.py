@@ -7,6 +7,7 @@ from GenericFunctions.Functions import *
 from Const.Currency import *
 import re
 import json
+from .Allegro import AllegroConst, AllegroWebdriver as awd
 
 
 class AllegroRobotClass(SiteRobot):
@@ -26,44 +27,6 @@ class AllegroRobotClass(SiteRobot):
             'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
             'cookie': '_ga=GA1.2.499925289.1615639123; _gat_UA-2827377-1=1; cartUserId=ba3gh4rr-ajuu-5bhd-cuc3-f48d7js56bjm; _gcl_au=1.1.1268673892.1615639122; datadome=MZf0jOwdebRRGEpdfhgXyLPbphnhEt2roJ~7eYu9_1tLk_nSaeyaX5AY~fixjrBnPbYeBVv0g4APovElWtOTH4Bj2zo8nnmHxW-1zo6vBO; _ga_2FTJ836HTM=GS1.1.1615639122.1.0.1615639122.60; _gid=GA1.2.696275626.1615639123; __gfp_64b=zFN7fJwNZnUtvyp5w4rSjWSRqNV0KM0hgP5iLe4jWRL.x7|1615639121; _cmuid=ba3gh4rr-ajuu-5bhd-cuc3-f48d7js56bjm;'
         })
-        self.pages = {
-            "nike_M": "https://allegro.pl/kategoria/obuwie-meskie-532?bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&"
-                      "dostawa-z-polski=tak&marka=Nike&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n",
-            "nike_W": "https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=Nike&"
-                      "oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112",
-            'adidas_M': 'https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112'
-                        '&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko',
-            'adidas_W': 'https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas'
-                        '&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112',
-            'newBalance_M': 'https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20'
-                            'Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&b'
-                            'match=dict20120-m-ctx-fas-1-2-1203&order=',
-            'reebok_M': "https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&oryginalne-opakowanie"
-                        "-producenta=pude%C5%82ko&order=n&bmatch=dict201214-ctx-fas-1-2-1218&stan=nowe"
-                        "&stan=nowe%20bez%20metki&stan=nowe%20z%20defektem&marka=Reebok"
-        }
-        # self.fake_sellers = []
-        self.fake_sellers = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB', 'world-shop',
-                             'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324', 'Tzmark',
-                             'GTshoes', 'AlleButy1819', 'Eski_Sports', 'ButicSport', 'Razor69996', 'Sneakers_On_Fire',
-                             'sneakers_sale', 'mike__c', 'DIA-MOND-SHOP', 'GORDIOSpl', 'halfprices', 'mkshoes00',
-                             'sklep_DandB', 'dgkein', 'DirkNowitzki', 'DongmeiTrade', 'Mrx_Shoes', 'sportowebuty24h',
-                             'Taniejsieniedaa', 'GToutlet', 'wonderfully', 'Tiger_77', 'minouglobal',
-                             'halfpricesplywak26', 'Start66FERRY', 'URSI151', 'harlemworldnyc', 'awmax', 'maciejmaspor',
-                             'Fashion-styleLTD', 'sportella_pl', 'FreeSia333', 'handyshopping', 'Pewexolandia',
-                             'Solo-Sport', 'laijiebd423209', 'MEGA-WYPRZEDAZE', 'LuxZone', 'jingxianb140725',
-                             'TransMax97', 'Qijunlvyou', 'MegaSales', 'EverySize', 'EGGG', 'max-trade-ltd', 'xenehho',
-                             'Razor69 996', 'littleyou', 'bangruowuren', 'lukaszmer', 'Modern_LondonONE-DESIGN',
-                             'comewithme', 'Tanie-Kicksy', 'guger-online', 'RoseLee', 'Billa-shop', 'yubopid57777',
-                             'CoolLabels', 'comewith', 'new_shoes_kicks', 'bestgood', 'jessciaaa', 'butyspecial_pl',
-                             'Modern_London', 'yingying', 'ModenooBox', 'Paula_Shoes', 'KustoSeller3', 'CandySport',
-                             'NaGiewoncie1409', 'CalceolarPL', 'KustoSeller32', 'alleo-promocje', 'chentaozo350604',
-                             'luzhuangly653558', 'qiongyouyv098054', 'AnfiniHardaway', 'Janutzboots', 'Martunia_91',
-                             'tarasofobia', 'ntulppma', 'Buty_UK', 'saleneo-com', 'saleneo_pl', 'dostawa-w-2tyg',
-                             '4F_Sklep', 'cool_shoes_1993', 'Client:58508393', 'super_sneakers', 'Stasic77',
-                             'zakupowo_24', 'Fenglin', 'Weilin', 'Butorajshop', 'kongjing1', 'saleneo_com', 'LoveSales',
-                             'saleneo-pl']
-
         self.site_configuration = {
             "title_class": ['h1', '_1s2v1 _1djie _4lbi0'],
             "nick_class": ['a', '_w7z6o _15mod _9a071_3tKtu'],
@@ -73,7 +36,7 @@ class AllegroRobotClass(SiteRobot):
             "sizes_tile": ['div', '_9a071_2llTZ _1nfka'],
             "current_size": ['div', '_17qy1 _1vryf _f8818_1X1F-']
         }
-        self.washed_titles = ['Pegasus Turbo', 'max 90', 'air max 90']
+        self.allegro_driver = awd.AllegroWebdriver()
 
     def get_available_sizes(self, soup):
         available_sizes = []
@@ -108,9 +71,9 @@ class AllegroRobotClass(SiteRobot):
             print("IndexError: {}".format(e))
             return False
 
-        if seller_name in self.fake_sellers:
+        if seller_name in AllegroConst.FAKE_SELLERS:
             return False
-        for washed in self.washed_titles:
+        for washed in AllegroConst.WASHED_TITLES:
             if washed in auction_title.lower():
                 return False
 
@@ -159,6 +122,12 @@ class AllegroRobotClass(SiteRobot):
             if 'lokalnie' not in link:
                 product_list.append(link)
         # print(len(product_list))
+        return product_list
+
+    def get_product_list_webdriver(self, page_link, page):
+        uri = page_link + '&p={}'.format(page)
+        print('PAGE: {} URI: {}'.format(page, uri))
+        product_list = self.allegro_driver.get_offers_urls(uri)
         return product_list
 
     def get_site_content(self, site_link, soup=None):
@@ -236,20 +205,23 @@ class AllegroRobotClass(SiteRobot):
         return output_product
 
     def start_process(self, start_page, end_page, brand):
-        # time.sleep(30)
         self.stockxManager.pids_not_available = open(switch(brand, 'file'), 'r').readlines()
         for p in range(start_page, end_page):
             self.stockxManager.file = open(switch(brand, 'file'), 'a')
-            brand_page = self.pages.get(brand)
-            offer_links = self.get_product_list(brand_page, p)
+            brand_page = AllegroConst.ALLEGRO_PAGES.get(brand)
+
+            # TODO validate offer basing on pid in link name, if invalid, dont make soup
+
+            offer_links = self.get_product_list_webdriver(brand_page, p)
             if not offer_links:
                 print('Didnt create soup for offer links, continuing')
                 continue
             pids_processed = 0
             all_offers = len(offer_links)
             for offer_link in offer_links:
-                # time.sleep(2)
-                offer_soup = self.siteSoup.make_soup(offer_link)
+
+                offer_soup = self.allegro_driver.make_soup_from_url(offer_link)
+                # offer_soup = self.siteSoup.make_soup(offer_link)
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
                     continue
@@ -289,6 +261,7 @@ class AllegroRobotClass(SiteRobot):
                 if output_product:
                     print(json.dumps(output_product.__dict__, indent=1))
 
+                print('Offer processed')
             self.stockxManager.file.close()
             print("pids processed: {}/{}".format(pids_processed, all_offers))
 

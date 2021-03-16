@@ -22,22 +22,23 @@ class Soup:
 
     def switch_ua(self):
         ua_len = len(self.user_agents)
-        rand = random.randint(0, ua_len-1)
-        self.request_headers['user-agent'] = self.user_agents[rand].rstrip()
+        rand = random.randint(0, ua_len - 1)
+        new_ua = self.user_agents[rand].rstrip()
+        self.request_headers['user-agent'] = new_ua
+        return new_ua
 
     def make_soup(self, link):
         payload = {}
         headers = self.request_headers
-        retry_times = 0
         while True:
             try:
-                rand = random.randint(2, 10)
+                rand = random.randint(2, 100)
                 self.switch_ua()
-                # link_req = requests.request("GET", link, headers=headers, data=payload, proxies=self.proxies[rand])
-                print('sleeping for {0} sec...'.format(rand))
-                time.sleep(rand)
+                # print('sleeping for {0} sec...'.format(rand))
+                # time.sleep(rand)
                 link_req = requests.request("GET", link, headers=headers, data=payload)
                 link_content = link_req.text
+
                 if link_req.status_code == 200:
                     # print('passed')
                     soup = BeautifulSoup(link_content, 'html.parser')
@@ -45,33 +46,39 @@ class Soup:
                 else:
                     while True:
                         print("not passed")
-                        new_cookie = RefreshCookies.start_process()
-                        self.request_headers['cookie'] = new_cookie
-                        print('new cookie applied')
-                        time.sleep(2)
-
-                        # new_link = "http://api.scraperapi.com?api_key=64f35214a3ab1ce53b4d73f88b4f750c&url={}".format(link)
                         self.switch_ua()
-                        link_req = requests.request("GET", link, headers=self.request_headers, data=payload)
-                        link_content = link_req.text
-                        soup = BeautifulSoup(link_content, 'html.parser')
-                        print("Status code: " + str(link_req.status_code))
-                        if link_req.status_code == 200:
-                            print('passed after fail')
-                            return soup
-                        # elif link_req.status_code == 429:
-                        #     return None
-                        else:
-                            pass
 
-                    # print("Error occurred while creating soup. StatusCode={} URL={}".format(link_req.status_code, link))
-                    # if retry_times < 1:
-                    #     # time.sleep(60)
-                    #     retry_times += 1
-                    # else:
-                    #     print("Exceeded retry times while creating soup")
-                    #     return None
+                        if 'allegro' in link:
+
+                            new_cookie = RefreshCookies.start_process()
+                            self.request_headers['cookie'] = new_cookie
+                            print('new cookie applied')
+
+                            new_link = "http://api.scraperapi.com?api_key=64f35214a3ab1ce53b4d73f88b4f750c"\
+                            "&url={0}&session_number={1}".format(link, rand)
+                            link_req = requests.request("GET", new_link, headers=self.request_headers, data=payload)
+                            if link_req.status_code == 200:
+                                soup = BeautifulSoup(link_content, 'html.parser')
+                                return soup
+                            else:
+                                print("Didnt get 200 while invoking scraperapi, retrying")
+                                pass
+                        else:
+                            time.sleep(60)
+                            link_req = requests.request("GET", link, headers=self.request_headers, data=payload)
+                            link_content = link_req.text
+                            if link_req.status_code == 200:
+                                soup = BeautifulSoup(link_content, 'html.parser')
+                                print('passed after fail')
+                                return soup
+                            else:
+                                pass
+
+
 
             except Exception as e:
                 print("Exception while making soup: {0}".format(e))
                 return None
+
+
+    # def create_soup_from_content

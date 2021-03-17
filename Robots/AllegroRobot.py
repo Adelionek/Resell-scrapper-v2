@@ -8,6 +8,7 @@ from Const.Currency import *
 import re
 import json
 from .Allegro import AllegroConst, AllegroWebdriver as awd
+import datetime
 
 
 class AllegroRobotClass(SiteRobot):
@@ -85,6 +86,16 @@ class AllegroRobotClass(SiteRobot):
             return False
         return True
 
+    def validate_link(self, offer_link):
+        pids_not_available = [pid.strip().replace(" ", "-") for pid in self.stockxManager.pids_not_available]
+        unwanted_titles = ['max-90', 'air-max-90']
+        pids_not_available += unwanted_titles
+        contains_pid = any(pid in offer_link for pid in pids_not_available)
+
+        if contains_pid:
+            return False
+        return True
+
     def find_pid_pattern(self, soup, offer_link, brand):
         pattern = switch(brand, 'pattern')
         params_pid = [pid.text.split(':')[1] for pid in soup.find_all("li", "_f8818_2jDsV")
@@ -111,7 +122,6 @@ class AllegroRobotClass(SiteRobot):
         if not soup:
             return None
 
-        # TODO ADD IF
         offers = soup.find_all(self.site_configuration['offer_title'][0], self.site_configuration['offer_title'][1])
         if not offers:
             # second class used by allegro
@@ -205,21 +215,28 @@ class AllegroRobotClass(SiteRobot):
         return output_product
 
     def start_process(self, start_page, end_page, brand):
+
         self.stockxManager.pids_not_available = open(switch(brand, 'file'), 'r').readlines()
+
         for p in range(start_page, end_page):
             self.stockxManager.file = open(switch(brand, 'file'), 'a')
             brand_page = AllegroConst.ALLEGRO_PAGES.get(brand)
-
-            # TODO validate offer basing on pid in link name, if invalid, dont make soup
+            start_time = datetime.datetime.now()
 
             offer_links = self.get_product_list_webdriver(brand_page, p)
             if not offer_links:
                 print('Didnt create soup for offer links, continuing')
                 continue
+
             pids_processed = 0
             all_offers = len(offer_links)
+
             for offer_link in offer_links:
 
+                is_offer_valid = self.validate_link(offer_link)
+                if not is_offer_valid:
+                    print('SKIPPED LINK!!')
+                    continue
                 offer_soup = self.allegro_driver.make_soup_from_url(offer_link)
                 # offer_soup = self.siteSoup.make_soup(offer_link)
                 if not offer_soup:
@@ -262,6 +279,11 @@ class AllegroRobotClass(SiteRobot):
                     print(json.dumps(output_product.__dict__, indent=1))
 
                 print('Offer processed')
+
+            end_time = datetime.datetime.now()
+            diff = end_time - start_time
+            print("All offers: {0} for page: {1} took: {2} seconds".format(all_offers, p, diff.seconds))
+
             self.stockxManager.file.close()
             print("pids processed: {}/{}".format(pids_processed, all_offers))
 

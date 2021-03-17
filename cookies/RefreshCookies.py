@@ -12,9 +12,19 @@ import re
 
 def get_mp3_link(driver):
     # elem_music = driver.find_element_by_class_name('geetest_music')
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-    audio = soup.find('audio')
-    return audio.attrs['src']
+
+    # soup = BeautifulSoup(driver.page_source, 'html.parser')
+    # audio = soup.find('audio')
+    # return audio.attrs['src']
+    try:
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        audio = soup.find('audio')
+        src = audio.attrs['src']
+    except Exception as e:
+        time.sleep(3)
+        print('NO ATTRS SRC')
+        pass
+    return src
 
 
 def recognize_text_from_mp3(file_name):
@@ -37,9 +47,9 @@ def download_mp3(link, file_name):
 
 
 def move_mouse():
-    pyautogui.moveTo(965, 199, 3, pyautogui.easeInBounce)
-    pyautogui.moveTo(1000, 1500, 2.5, pyautogui.easeInBounce)
-    pyautogui.moveTo(100, 614, 2, pyautogui.easeInBounce)
+    pyautogui.moveTo(965, 199, 1, pyautogui.easeInBounce)
+    pyautogui.moveTo(1000, 1500, 1, pyautogui.easeInBounce)
+    pyautogui.moveTo(100, 614, 1.5, pyautogui.easeInBounce)
     # pyautogui.moveTo(2000, 650, 3, pyautogui.easeInBounce)
 
 
@@ -55,77 +65,77 @@ def refresh_cookies(driver):
 
 
 def get_digits_from_page(driver):
-    mp3_link = get_mp3_link(driver)
-    download_mp3(mp3_link, 'mp3audio')
-    recognized_text = recognize_text_from_mp3('mp3audio')
-    print(recognized_text)
-    recognized_text = recognized_text.replace('for', '4').replace('to', '2').replace('gate', '8')
-    digits = re.findall(r'\d+', recognized_text)
-    digits = "".join(digits)
-    print(digits)
+    while True:
+        mp3_link = get_mp3_link(driver)
+        download_mp3(mp3_link, 'mp3audio')
+        recognized_text = recognize_text_from_mp3('mp3audio')
+        # print(recognized_text)
+        recognized_text = recognized_text.replace('for', '4').replace('to', '2').replace('gate', '8')
+        digits = re.findall(r'\d+', recognized_text)
+        digits = "".join(digits)
 
-    if len(digits) == 6:
-        print("Digits recognized successfully")
-        return digits
-    else:
-        print("Wrong recognized digits, trying again...")
-        pyautogui.moveTo(1332, 758, 2, pyautogui.easeInQuad)
-        pyautogui.click()
-        time.sleep(9)
-        get_digits_from_page(driver)
+        if len(digits) == 6:
+            # print("Digits recognized successfully")
+            return digits
+        else:
+            # print("Wrong recognized digits, trying again...")
+            pyautogui.moveTo(1332, 758, 2, pyautogui.easeInQuad)
+            pyautogui.click()
+            time.sleep(7)
+            pass
 
-def start_process():
 
+def init_driver():
     driver = webdriver.Chrome(executable_path=os.path.join(os.getcwd(), 'webDrivers', 'chromedriver.exe'))
     driver.get("https://allegro.pl/")
     time.sleep(2)
     driver.refresh()
     time.sleep(2)
 
+
+def start_process(driver):
+    driver.refresh()
+    time.sleep(2)
     move_mouse()
 
-    # click middle verify button
-    # elem = driver.find_element_by_class_name('geetest_radar_tip_content')
-    # elem.click()
+    # Move to middle button to begin verification
     pyautogui.moveTo(919, 894, 2, pyautogui.easeInQuint)
     pyautogui.click()
-    time.sleep(3)
+    time.sleep(2)
+    pyautogui.moveTo(1200, 1200, 2, pyautogui.easeInQuint)
 
-    move_mouse()
-
-    # click sound icon
-    # elem_voice = driver.find_element_by_class_name('geetest_voice')
-    # elem_voice.click()
+    # Click sound icon
     pyautogui.moveTo(1032, 1140, 2, pyautogui.easeInQuint)
     pyautogui.click()
     time.sleep(2)
 
+    # Get digits from sound file
     driver.switch_to.default_content()
     frame = driver.find_element_by_tag_name('iframe')
     driver.switch_to.frame(frame)
-
     digits = get_digits_from_page(driver)
-    time.sleep(3)
 
     # move to enter voice text
     pyautogui.moveTo(1213, 996, 2, pyautogui.easeInQuad)
     pyautogui.click()
-
-    pyautogui.write(digits, interval=0.5)
-    print('writing digits')
+    pyautogui.write(digits, interval=0.3)
+    # print('writing digits')
 
     # move and click OK
-    pyautogui.moveTo(1219, 1127, 2, pyautogui.easeInQuad)
+    pyautogui.moveTo(1219, 1127, 0.5, pyautogui.easeInQuad)
     pyautogui.click()
-    print('clicking ok and sleeping...')
-    time.sleep(5)
+    # print('clicking ok and sleeping...')
+    time.sleep(4)
 
-    print('generating new cookies')
-    new_cookies = refresh_cookies(driver)
-    print('new cookies generated')
-    driver.close()
-    return new_cookies
+# print('generating new cookies')
+# new_cookies = refresh_cookies(driver)
+# print('new cookies generated')
+# driver.close()
 
+
+# click middle verify button
+# elem = driver.find_element_by_class_name('geetest_radar_tip_content')
+# elem.click()
 
 # soup = BeautifulSoup(driver.page_source, 'html.parser')
 # iframe = soup.find('iframe')

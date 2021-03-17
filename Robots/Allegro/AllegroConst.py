@@ -15,7 +15,7 @@ ALLEGRO_PAGES = {
                         "&stan=nowe%20bez%20metki&stan=nowe%20z%20defektem&marka=Reebok"
         }
 
-WASHED_TITLES = ['Pegasus Turbo', 'max 90', 'air max 90']
+WASHED_TITLES = ['Pegasus Turbo', 'max-90', 'max 90', 'air max 90']
 
 FAKE_SELLERS = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB', 'world-shop',
                              'macopoloshopping', 'superbutypl', 'kuipengzjz29703', 'lgxbvsa', 'xibao13324', 'Tzmark',

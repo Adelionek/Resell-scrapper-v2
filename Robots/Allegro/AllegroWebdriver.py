@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import os
 from selenium.common.exceptions import NoSuchElementException
 import time
-from cookies import RefreshCookies
+from . import DatadomeBypass as DP
 
 
 def create_webdriver():
@@ -54,7 +54,7 @@ class AllegroWebdriver:
 
     def make_soup_from_url(self, url):
         self.driver.get(url)
-        time.sleep(3)
+        time.sleep(1)
         while True:
             try:
                 mainwraper = self.driver.find_element_by_class_name('main-wrapper')
@@ -63,5 +63,5 @@ class AllegroWebdriver:
                 return soup
             except NoSuchElementException as exception:
                 print('Datadome protection. Sleeping...')
-                RefreshCookies.start_process(self.driver)
-                time.sleep(5)
+                DP.start_process(self.driver)
+                time.sleep(1)

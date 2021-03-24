@@ -125,3 +125,5 @@ dmypy.json
 
 *.mp3
 *.wav
+
+.idea/

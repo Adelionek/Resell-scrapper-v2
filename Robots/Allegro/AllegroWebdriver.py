@@ -54,6 +54,7 @@ class AllegroWebdriver:
 
     def make_soup_from_url(self, url):
         self.driver.get(url)
+        self.driver.refresh()
         time.sleep(1)
         while True:
             try:

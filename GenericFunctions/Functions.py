@@ -34,10 +34,20 @@ def switch(brand, type):
             'file': os.path.join(current_dir, 'new_balance_PID_not_available.txt'),
             'size_chart': new_balance_M
         },
+        'newBalance_W': {
+            'pattern': new_balance,
+            'file': os.path.join(current_dir, 'new_balance_W_PID_not_available.txt'),
+            'size_chart': new_balance_W
+        },
         'reebok_M': {
             'pattern': reebok,
             'file': os.path.join(current_dir, 'reebok_PID_not_available.txt'),
             'size_chart': reebok_M
+        },
+        'reebok_W': {
+            'pattern': reebok,
+            'file': os.path.join(current_dir, 'reebok_W_PID_not_available.txt'),
+            'size_chart': reebok_W
         }
     }
     return switcher[brand][type]

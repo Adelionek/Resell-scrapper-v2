@@ -32,7 +32,9 @@ def switch_frames(driver):
 
 def reset_driver_to_get_mp3_link(driver):
     driver.delete_all_cookies()
+    print("deleted cookies")
     driver.refresh()
+    print('Refreshed')
     time.sleep(2)
     print('Cookies deleted')
     driver.refresh()
@@ -87,7 +89,7 @@ def get_digits_from_page(driver):
         download_mp3(mp3_link, 'mp3audio')
         recognized_text = recognize_text_from_mp3('mp3audio')
 
-        # print(recognized_text)
+        print(recognized_text)
         recognized_text = recognized_text.replace('for', '4').replace('to', '2').replace('gate', '8')
         digits = re.findall(r'\d+', recognized_text)
         digits = "".join(digits)
@@ -113,6 +115,7 @@ def get_digits_from_page(driver):
             # click button for new mp3
             pyautogui.moveTo(601, 390, 2, pyautogui.easeInQuad)
             pyautogui.click()
+            time.sleep(2)
             pass
 
 

@@ -294,24 +294,27 @@ def check_sizes_on_gender(stockx_product, source_product, brand):
         print('found wrong gender')
         correct_brand = brand.split('_')[0] + '_M'
         men_sizes = source_product.eu_to_us(source_product.available_sizes['EU'], correct_brand)
-        return men_sizes
-    elif gender == "women" and "W" not in brand:
 
-        if 'reebok' in brand or 'new_balance' in brand:
+        return men_sizes
+
+    elif gender == "women" and "W" not in brand:
+        if 'reebok' in brand or 'balance' in brand:
             print('NOT SUPPORTED')
             return source_product.available_sizes['US']
-
         print('found wrong gender')
         correct_brand = brand.split('_')[0] + '_W'
         women_sizes = source_product.eu_to_us(source_product.available_sizes['EU'], correct_brand)
+
         return women_sizes
+
     elif gender == "child" and "GS" not in brand:
-        if 'adidas' in brand or 'reebok' in brand or 'new_balance' in brand:
-            print('NOT SUPPORTED')
+        if 'adidas' in brand or 'reebok' in brand or 'balance' in brand.lower():
+            print('NOT SUPPORTED brand: {0}'.format(brand))
             return source_product.available_sizes['US']
         print('found wrong gender')
         # correct_brand = brand.split('_')[0] + '_GS'
         gs_sizes = source_product.eu_to_gs(source_product.available_sizes['EU'], brand)
         return gs_sizes
+
     else:
         return source_product.available_sizes['US']

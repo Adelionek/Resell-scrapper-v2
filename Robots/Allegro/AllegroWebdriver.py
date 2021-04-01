@@ -66,3 +66,11 @@ class AllegroWebdriver:
                 print('Datadome protection. Sleeping...')
                 DP.start_process(self.driver)
                 time.sleep(1)
+            except Exception as e:
+                print(e)
+                self.make_soup_from_url(url)
+                pass
+
+
+
+

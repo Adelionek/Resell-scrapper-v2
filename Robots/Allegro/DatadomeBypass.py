@@ -19,6 +19,7 @@ def get_mp3_link(driver):
             src = audio.attrs['src']
             return src
         except Exception as e:
+            # TODO HANDLE THIS !!
             print('NO ATTRS SRC')
             reset_driver_to_get_mp3_link(driver)
             time.sleep(3)
@@ -28,6 +29,21 @@ def switch_frames(driver):
     driver.switch_to.default_content()
     frame = driver.find_element_by_tag_name('iframe')
     driver.switch_to.frame(frame)
+
+
+def check_if_driver_blocked(driver):
+    driver.switch_to.default_content()
+    try:
+        driver.switch_to.default_content()
+        wraper = driver.find_element_by_class_name('main-wrapper')
+        if wraper:
+            return False
+        return True
+    except Exception as e:
+        frame = driver.find_element_by_tag_name('iframe')
+        driver.switch_to.frame(frame)
+        print(e)
+        return True
 
 
 def reset_driver_to_get_mp3_link(driver):
@@ -54,7 +70,12 @@ def recognize_text_from_mp3(file_name):
 
     with file_audio as source:
         audio_text = r.record(source)
-        return r.recognize_google(audio_text)
+        try:
+            return r.recognize_google(audio_text)
+        except Exception as e:
+            print(e)
+            # return dummy value to retry
+            return "12345"
 
 
 def download_mp3(link, file_name):
@@ -85,6 +106,10 @@ def get_digits_from_page(driver):
     while True:
         # pyautogui.moveTo(601, 390, 2, pyautogui.easeInQuad)
         # pyautogui.click()
+        is_blocked = check_if_driver_blocked(driver)
+        if not is_blocked:
+            print("Page has been unblocked, finishing datadome bypass process")
+            return None
         mp3_link = get_mp3_link(driver)
         download_mp3(mp3_link, 'mp3audio')
         recognized_text = recognize_text_from_mp3('mp3audio')
@@ -145,32 +170,26 @@ def click_sound_icon():
 def start_process(driver):
     driver.refresh()
     time.sleep(1)
-
-    # while True:
-    #     time.sleep(2)
-    #     pos = pyautogui.position()
-    #     print(pyautogui.position())
-
     move_mouse()
     begin_verification()
     click_sound_icon()
     switch_frames(driver)
 
-
     # Get digits from sound file
     digits = get_digits_from_page(driver)
 
-    # move to enter voice text
-    pyautogui.moveTo(541, 500, 2, pyautogui.easeInQuad)
-    pyautogui.click()
-    pyautogui.write(digits, interval=0.3)
-    # print('writing digits')
+    if digits:
+        # move to enter voice text
+        pyautogui.moveTo(541, 500, 2, pyautogui.easeInQuad)
+        pyautogui.click()
+        pyautogui.write(digits, interval=0.3)
+        # print('writing digits')
 
-    # move and click OK
-    pyautogui.moveTo(546, 568, 0.5, pyautogui.easeInQuad)
-    pyautogui.click()
-    # print('clicking ok and sleeping...')
-    time.sleep(4)
+        # move and click OK
+        pyautogui.moveTo(546, 568, 0.5, pyautogui.easeInQuad)
+        pyautogui.click()
+        # print('clicking ok and sleeping...')
+        time.sleep(4)
 
 # print('generating new cookies')
 # new_cookies = refresh_cookies(driver)

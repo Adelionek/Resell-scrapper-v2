@@ -62,14 +62,28 @@ class AllegroRobotClass(SiteRobot):
 
         return available_sizes
 
+    def switch_site_configuration(self, soup):
+        self.site_configuration['nick_class'] = ['a', '_w7z6o _15mod _9a071_3tKtu']
+        self.site_configuration['title_class'] = ['h1', '_1s2v1 _1djie _4lbi0']
+
+        try:
+            soup.find_all(self.site_configuration['nick_class'][0],
+                          self.site_configuration['nick_class'][1])[0].text.split(' ')[0].strip()
+            soup.find_all(self.site_configuration['title_class'][0],
+                          self.site_configuration['title_class'][1])[0].text
+        except IndexError as ie:
+            self.site_configuration['nick_class'] = ['div', '_1s2v1 _1djie']
+            self.site_configuration['title_class'] = ['h4', '_18vat _9a071_U7GFO _1s2v1 _dsf2b']
+            print('switched config')
+
     def validate_offer(self, soup, offer_link):
         try:
             seller_name = soup.find_all(self.site_configuration['nick_class'][0],
                                         self.site_configuration['nick_class'][1])[0].text.split(' ')[0].strip()
             auction_title = soup.find_all(self.site_configuration['title_class'][0],
                                           self.site_configuration['title_class'][1])[0].text
-        except IndexError as e:
-            print("IndexError: {}".format(e))
+        except Exception as e:
+            print('Uunhandled seller name and action title exception: ', e)
             return False
 
         if seller_name in AllegroConst.FAKE_SELLERS:
@@ -242,6 +256,7 @@ class AllegroRobotClass(SiteRobot):
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
                     continue
+                self.switch_site_configuration(offer_soup)
                 is_offer_valid = self.validate_offer(offer_soup, offer_link)
                 if not is_offer_valid:
                     continue

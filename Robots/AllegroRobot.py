@@ -62,18 +62,16 @@ class AllegroRobotClass(SiteRobot):
 
         return available_sizes
 
-    def switch_site_configuration(self, soup):
+    def get_auction_seller_and_title(self, soup):
         self.site_configuration['nick_class'] = ['a', '_w7z6o _15mod _9a071_3tKtu']
         self.site_configuration['title_class'] = ['h1', '_1s2v1 _1djie _4lbi0']
 
         try:
-            soup.find_all(self.site_configuration['nick_class'][0],
-                          self.site_configuration['nick_class'][1])[0].text.split(' ')[0].strip()
-            soup.find_all(self.site_configuration['title_class'][0],
-                          self.site_configuration['title_class'][1])[0].text
+            seller_name = soup.find_all('a', '_w7z6o _15mod _9a071_3tKtu')[0].text.split(' ')[0].strip()
+            auction_title = soup.find_all('h1', '_1s2v1 _1djie _4lbi0')[0].text
         except IndexError as ie:
-            self.site_configuration['nick_class'] = ['div', '_1s2v1 _1djie']
-            self.site_configuration['title_class'] = ['h4', '_18vat _9a071_U7GFO _1s2v1 _dsf2b']
+            seller_name = soup.find_all('div', '_1s2v1 _1djie')[0].text.split(' ')[1]
+            auction_title = soup.find_all('h4', '_18vat _9a071_U7GFO _1s2v1 _dsf2b')[0].text
             print('switched config')
 
     def validate_offer(self, soup, offer_link):
@@ -256,7 +254,7 @@ class AllegroRobotClass(SiteRobot):
                 if not offer_soup:
                     print('Offer_soup is none, error occurred')
                     continue
-                self.switch_site_configuration(offer_soup)
+                self.get_auction_seller_and_title(offer_soup)
                 is_offer_valid = self.validate_offer(offer_soup, offer_link)
                 if not is_offer_valid:
                     continue
@@ -293,8 +291,8 @@ class AllegroRobotClass(SiteRobot):
                 if output_product:
                     print(json.dumps(output_product.__dict__, indent=1))
 
-                print('Offer processed')
 
+            time.sleep(30)
             end_time = datetime.datetime.now()
             diff = end_time - start_time
             print("All offers: {0} for page: {1} took: {2} seconds".format(all_offers, p, diff.seconds))

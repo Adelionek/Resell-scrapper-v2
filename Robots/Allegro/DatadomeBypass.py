@@ -19,9 +19,11 @@ def get_mp3_link(driver):
             src = audio.attrs['src']
             return src
         except Exception as e:
-            # TODO HANDLE THIS !!
             print('NO ATTRS SRC')
             reset_driver_to_get_mp3_link(driver)
+            if not check_if_driver_blocked(driver):
+                print('Get mp3link driver unblocked')
+                return None
             time.sleep(3)
 
 
@@ -42,7 +44,6 @@ def check_if_driver_blocked(driver):
     except Exception as e:
         frame = driver.find_element_by_tag_name('iframe')
         driver.switch_to.frame(frame)
-        print(e)
         return True
 
 
@@ -79,10 +80,14 @@ def recognize_text_from_mp3(file_name):
 
 
 def download_mp3(link, file_name):
-    r = requests.get(link)
-    with open('./' + file_name + '.mp3', 'wb') as filetowrite:
-        filetowrite.write(r.content)
-    # print('./' + file_name + '.mp3' + 'file saved')
+    try:
+
+        r = requests.get(link)
+        with open('./' + file_name + '.mp3', 'wb') as filetowrite:
+            filetowrite.write(r.content)
+        # print('./' + file_name + '.mp3' + 'file saved')
+    except Exception as e:
+        print("Error while downloading file...", e)
 
 
 def move_mouse():
@@ -111,6 +116,8 @@ def get_digits_from_page(driver):
             print("Page has been unblocked, finishing datadome bypass process")
             return None
         mp3_link = get_mp3_link(driver)
+        if not mp3_link:
+            return None
         download_mp3(mp3_link, 'mp3audio')
         recognized_text = recognize_text_from_mp3('mp3audio')
 

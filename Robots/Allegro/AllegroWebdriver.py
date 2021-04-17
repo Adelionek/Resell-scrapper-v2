@@ -67,9 +67,14 @@ class AllegroWebdriver:
                 DP.start_process(self.driver)
                 time.sleep(1)
             except Exception as e:
-                print(e)
+                print('unhandled error', e)
+                self.reset_driver()
                 self.make_soup_from_url(url)
                 pass
+
+    def reset_driver(self):
+        self.driver.close()
+        self.driver = webdriver.Chrome(executable_path=os.path.join(os.getcwd(), 'webDrivers', 'chromedriver.exe'))
 
 
 

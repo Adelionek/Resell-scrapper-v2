@@ -1,0 +1,1941 @@
+C:\Users\Adam\AppData\Local\Programs\Python\Python37-32\python.exe D:/Python/Resell-scrapper-v2/main.py
+PAGE: 58 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=58
+Original: 63, Urls: 63, Deduplicated: 52
+All offers: 52 for page: 58 took: 319 seconds
+pids processed: 3/52
+PAGE: 59 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=59
+Original: 63, Urls: 63, Deduplicated: 38
+SKIPPED LINK!!
+All offers: 38 for page: 59 took: 238 seconds
+pids processed: 3/38
+PAGE: 60 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=60
+Original: 63, Urls: 63, Deduplicated: 43
+size:'43,5' eu_to_us exception
+size:'43,5' eu_to_us exception
+size:'43,5' eu_to_us exception
+size:'41,5' eu_to_us exception
+size:'43,5' eu_to_us exception
+All offers: 43 for page: 60 took: 281 seconds
+pids processed: 9/43
+PAGE: 61 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=61
+Original: 63, Urls: 63, Deduplicated: 57
+SKIPPED LINK!!
+SKIPPED LINK!!
+All offers: 57 for page: 61 took: 327 seconds
+pids processed: 2/57
+PAGE: 62 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=62
+Original: 63, Urls: 63, Deduplicated: 53
+size:'37' eu_to_us exception
+SKIPPED LINK!!
+All offers: 53 for page: 62 took: 298 seconds
+pids processed: 2/53
+PAGE: 63 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=63
+Original: 63, Urls: 63, Deduplicated: 53
+All offers: 53 for page: 63 took: 336 seconds
+pids processed: 3/53
+PAGE: 64 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=64
+Original: 63, Urls: 63, Deduplicated: 13
+SKIPPED LINK!!
+All offers: 13 for page: 64 took: 124 seconds
+pids processed: 0/13
+PAGE: 65 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=65
+Original: 63, Urls: 63, Deduplicated: 44
+found wrong gender
+SKIPPED LINK!!
+SKIPPED LINK!!
+All offers: 44 for page: 65 took: 265 seconds
+pids processed: 15/44
+PAGE: 66 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=66
+Original: 63, Urls: 63, Deduplicated: 50
+All offers: 50 for page: 66 took: 298 seconds
+pids processed: 8/50
+PAGE: 67 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=67
+Original: 63, Urls: 63, Deduplicated: 52
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 52 for page: 67 took: 297 seconds
+pids processed: 3/52
+PAGE: 68 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=68
+Original: 63, Urls: 63, Deduplicated: 11
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 11 for page: 68 took: 113 seconds
+pids processed: 0/11
+PAGE: 69 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=69
+Original: 63, Urls: 63, Deduplicated: 29
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 29 for page: 69 took: 202 seconds
+pids processed: 4/29
+PAGE: 70 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=70
+Original: 63, Urls: 63, Deduplicated: 30
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 30 for page: 70 took: 195 seconds
+pids processed: 3/30
+PAGE: 71 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=71
+Original: 63, Urls: 63, Deduplicated: 26
+All offers: 26 for page: 71 took: 179 seconds
+pids processed: 2/26
+PAGE: 72 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=72
+Original: 63, Urls: 63, Deduplicated: 34
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 34 for page: 72 took: 226 seconds
+pids processed: 6/34
+PAGE: 73 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=73
+Original: 63, Urls: 63, Deduplicated: 53
+SKIPPED LINK!!
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 53 for page: 73 took: 293 seconds
+pids processed: 3/53
+PAGE: 74 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=74
+Original: 63, Urls: 63, Deduplicated: 30
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 30 for page: 74 took: 189 seconds
+pids processed: 2/30
+PAGE: 75 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=75
+Original: 63, Urls: 63, Deduplicated: 24
+size:'39,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 24 for page: 75 took: 170 seconds
+pids processed: 0/24
+PAGE: 76 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=76
+Original: 63, Urls: 63, Deduplicated: 23
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 23 for page: 76 took: 172 seconds
+pids processed: 1/23
+PAGE: 77 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=77
+Original: 63, Urls: 63, Deduplicated: 41
+All offers: 41 for page: 77 took: 254 seconds
+pids processed: 2/41
+PAGE: 78 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=78
+Original: 63, Urls: 63, Deduplicated: 50
+size:'49' eu_to_us exception
+size:'49' eu_to_us exception
+size:'49' eu_to_us exception
+size:'49' eu_to_us exception
+size:'37' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 50 for page: 78 took: 283 seconds
+pids processed: 5/50
+PAGE: 79 URI: https://allegro.pl/kategoria/obuwie-meskie-532?order=n&bmatch=dict210105-ctx-fas-1-4-0112&stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&p=79
+Original: 63, Urls: 63, Deduplicated: 31
+size:'49' eu_to_us exception
+size:'49' eu_to_us exception
+All offers: 31 for page: 79 took: 210 seconds
+pids processed: 8/31
+PAGE: 1 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=1
+Original: 63, Urls: 63, Deduplicated: 56
+found wrong gender
+found wrong gender
+size:'31' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'31' eu_to_us exception
+All offers: 56 for page: 1 took: 332 seconds
+pids processed: 4/56
+PAGE: 2 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=2
+Original: 63, Urls: 63, Deduplicated: 52
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'31' eu_to_us exception
+found wrong gender
+size:'31' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 52 for page: 2 took: 307 seconds
+pids processed: 4/52
+PAGE: 3 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=3
+Original: 63, Urls: 63, Deduplicated: 55
+found wrong gender
+found wrong gender
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'37' eu_to_us exception
+size:'32' eu_to_us exception
+HTTP error occurred: 403 Client Error: Forbidden for url: https://stockx.com/api/browse?&_search=BB1935&dataType=product&country=PL
+While loop, sleeping
+While loop, sleeping
+While loop, sleeping
+response 200 after 403
+All offers: 55 for page: 3 took: 675 seconds
+pids processed: 4/55
+PAGE: 4 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=4
+Original: 63, Urls: 63, Deduplicated: 59
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'31' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 59 for page: 4 took: 323 seconds
+pids processed: 2/59
+PAGE: 5 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=5
+Original: 63, Urls: 63, Deduplicated: 58
+size:'32' eu_to_us exception
+size:'31' eu_to_us exception
+found wrong gender
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 58 for page: 5 took: 324 seconds
+pids processed: 7/58
+PAGE: 6 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=6
+Original: 63, Urls: 63, Deduplicated: 59
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+size:'37' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+All offers: 59 for page: 6 took: 322 seconds
+pids processed: 6/59
+PAGE: 7 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=7
+Original: 63, Urls: 63, Deduplicated: 58
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'31' eu_to_us exception
+found wrong gender
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 58 for page: 7 took: 316 seconds
+pids processed: 6/58
+PAGE: 8 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=8
+Original: 63, Urls: 63, Deduplicated: 58
+size:'31' eu_to_us exception
+size:'32' eu_to_us exception
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+found wrong gender
+size:'31' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+found wrong gender
+found wrong gender
+All offers: 58 for page: 8 took: 311 seconds
+pids processed: 9/58
+PAGE: 9 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=9
+Original: 63, Urls: 63, Deduplicated: 60
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+size:'34' eu_to_us exception
+size:'31' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+All offers: 60 for page: 9 took: 322 seconds
+pids processed: 4/60
+PAGE: 10 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=10
+Original: 63, Urls: 63, Deduplicated: 59
+size:'31' eu_to_us exception
+size:'31' eu_to_us exception
+HTTP error occurred: 403 Client Error: Forbidden for url: https://stockx.com/api/browse?&_search=DB0694&dataType=product&country=PL
+While loop, sleeping
+While loop, sleeping
+While loop, sleeping
+response 200 after 403
+size:'33' eu_to_us exception
+size:'33' eu_to_us exception
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'31' eu_to_us exception
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+All offers: 59 for page: 10 took: 689 seconds
+pids processed: 10/59
+PAGE: 11 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=11
+Original: 63, Urls: 63, Deduplicated: 59
+size:'32' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'33' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+size:'37' eu_to_us exception
+{
+ "product_id": "BD8055",
+ "product_name": "adidas Superstar Slip-On Triple Black (W)",
+ "brand": "adidas",
+ "profit": 133.03200000000004,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/buty-damskie-adidas-superstar-slipon-bd8055-9056755886",
+ "stockx_link": "https://stockx.com/adidas-superstar-slip-on-triple-black-w",
+ "available_sizes": {
+  "EU": [
+   "36",
+   "36 2/3",
+   "37 1/3",
+   "38",
+   "38 2/3",
+   "39 1/3"
+  ],
+  "US": [
+   "5",
+   "5.5",
+   "6",
+   "6.5",
+   "7",
+   "7.5"
+  ]
+ },
+ "highest_bid": 90,
+ "highest_bids": {
+  "available": {
+   "7.5": [
+    90
+   ],
+   "7": [
+    75
+   ]
+  },
+  "all": {
+   "7.5": [
+    90
+   ],
+   "7": [
+    75
+   ]
+  }
+ },
+ "retail": 448.00000000000006,
+ "offer_price": 179.0,
+ "payout": 312.03200000000004,
+ "bid_size": {
+  "EU": "39 1/3",
+  "US": "7.5"
+ },
+ "current_size_hb": 90
+}
+All offers: 59 for page: 11 took: 323 seconds
+pids processed: 8/59
+PAGE: 12 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=12
+Original: 63, Urls: 63, Deduplicated: 58
+size:'37' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+size:'37' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 58 for page: 12 took: 313 seconds
+pids processed: 9/58
+PAGE: 13 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=13
+Original: 63, Urls: 63, Deduplicated: 60
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+size:'37' eu_to_us exception
+size:'33' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+size:'37' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+found wrong gender
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+found wrong gender
+size:'37' eu_to_us exception
+found wrong gender
+All offers: 60 for page: 13 took: 331 seconds
+pids processed: 19/60
+PAGE: 14 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=14
+Original: 63, Urls: 63, Deduplicated: 59
+size:'37' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'32' eu_to_us exception
+found wrong gender
+found wrong gender
+size:'33' eu_to_us exception
+size:'32' eu_to_us exception
+size:'37' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+size:'37' eu_to_us exception
+found wrong gender
+found wrong gender
+size:'37' eu_to_us exception
+All offers: 59 for page: 14 took: 323 seconds
+pids processed: 14/59
+PAGE: 15 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=15
+Original: 63, Urls: 63, Deduplicated: 60
+found wrong gender
+found wrong gender
+found wrong gender
+found wrong gender
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+found wrong gender
+All offers: 60 for page: 15 took: 316 seconds
+pids processed: 8/60
+PAGE: 16 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=16
+Original: 63, Urls: 63, Deduplicated: 57
+size:'37' eu_to_us exception
+NOT SUPPORTED brand: adidas_W
+found wrong gender
+found wrong gender
+All offers: 57 for page: 16 took: 293 seconds
+pids processed: 6/57
+PAGE: 17 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=17
+Original: 63, Urls: 63, Deduplicated: 59
+found wrong gender
+found wrong gender
+found wrong gender
+All offers: 59 for page: 17 took: 293 seconds
+pids processed: 6/59
+PAGE: 18 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=18
+Original: 63, Urls: 63, Deduplicated: 48
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+found wrong gender
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 48 for page: 18 took: 258 seconds
+pids processed: 5/48
+PAGE: 19 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=19
+Original: 63, Urls: 63, Deduplicated: 58
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 58 for page: 19 took: 298 seconds
+pids processed: 1/58
+PAGE: 20 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=20
+Original: 63, Urls: 63, Deduplicated: 49
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+All offers: 49 for page: 20 took: 254 seconds
+pids processed: 5/49
+PAGE: 21 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=21
+Original: 63, Urls: 63, Deduplicated: 53
+found wrong gender
+{
+ "product_id": "EE6999",
+ "product_name": "adidas Ozweego Core Black",
+ "brand": "adidas",
+ "profit": 118.34160000000003,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/adidas-ee6999-buty-uniseks-sportowe-czarne-37-5-10583413500",
+ "stockx_link": "https://stockx.com/adidas-ozweego-core-black",
+ "available_sizes": {
+  "EU": [
+   "37,5"
+  ],
+  "US": [
+   "5"
+  ]
+ },
+ "highest_bid": 67,
+ "highest_bids": {
+  "available": {
+   "5": [
+    67
+   ]
+  },
+  "all": {
+   "4.5": [
+    92
+   ],
+   "4": [
+    88
+   ],
+   "9.5": [
+    85
+   ]
+  }
+ },
+ "retail": 492.80000000000007,
+ "offer_price": 102.5,
+ "payout": 220.84160000000003,
+ "bid_size": {
+  "EU": "36",
+  "US": "5"
+ },
+ "current_size_hb": 67
+}
+found wrong gender
+found wrong gender
+found wrong gender
+All offers: 53 for page: 21 took: 273 seconds
+pids processed: 7/53
+PAGE: 22 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=22
+Original: 63, Urls: 63, Deduplicated: 44
+SKIPPED LINK!!
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 44 for page: 22 took: 239 seconds
+pids processed: 3/44
+PAGE: 23 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=23
+Original: 63, Urls: 63, Deduplicated: 57
+All offers: 57 for page: 23 took: 303 seconds
+pids processed: 0/57
+PAGE: 24 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=24
+Original: 63, Urls: 63, Deduplicated: 59
+found wrong gender
+found wrong gender
+found wrong gender
+All offers: 59 for page: 24 took: 294 seconds
+pids processed: 5/59
+PAGE: 25 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=25
+Original: 63, Urls: 63, Deduplicated: 57
+found wrong gender
+found wrong gender
+found wrong gender
+HTTP error occurred: 403 Client Error: Forbidden for url: https://stockx.com/api/browse?&_search=DB1764&dataType=product&country=PL
+While loop, sleeping
+response 200 after 403
+All offers: 57 for page: 25 took: 420 seconds
+pids processed: 9/57
+PAGE: 26 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=26
+Original: 63, Urls: 63, Deduplicated: 46
+found wrong gender
+found wrong gender
+size:'37' eu_to_us exception
+size:'33' eu_to_us exception
+HTTP error occurred: 403 Client Error: Forbidden for url: https://stockx.com/api/browse?&_search=FY7286&dataType=product&country=PL
+While loop, sleeping
+While loop, sleeping
+While loop, sleeping
+response 200 after 403
+All offers: 46 for page: 26 took: 613 seconds
+pids processed: 4/46
+PAGE: 27 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=27
+Original: 63, Urls: 63, Deduplicated: 52
+size:'34' eu_to_us exception
+All offers: 52 for page: 27 took: 275 seconds
+pids processed: 3/52
+PAGE: 28 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=28
+Original: 63, Urls: 63, Deduplicated: 48
+size:'37' eu_to_us exception
+All offers: 48 for page: 28 took: 258 seconds
+pids processed: 1/48
+PAGE: 29 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=29
+Original: 63, Urls: 63, Deduplicated: 53
+found wrong gender
+All offers: 53 for page: 29 took: 285 seconds
+pids processed: 4/53
+PAGE: 30 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=30
+Original: 63, Urls: 63, Deduplicated: 59
+size:'39,5' eu_to_us exception
+found wrong gender
+All offers: 59 for page: 30 took: 295 seconds
+pids processed: 2/59
+PAGE: 31 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=31
+Original: 63, Urls: 63, Deduplicated: 51
+found wrong gender
+found wrong gender
+size:'39,5' eu_to_us exception
+All offers: 51 for page: 31 took: 271 seconds
+pids processed: 5/51
+PAGE: 32 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=32
+Original: 63, Urls: 63, Deduplicated: 56
+size:'37' eu_to_us exception
+size:'32,5' eu_to_us exception
+All offers: 56 for page: 32 took: 287 seconds
+pids processed: 3/56
+PAGE: 33 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=33
+Original: 63, Urls: 63, Deduplicated: 51
+NOT SUPPORTED brand: adidas_W
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 51 for page: 33 took: 267 seconds
+pids processed: 3/51
+PAGE: 34 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=34
+Original: 63, Urls: 63, Deduplicated: 42
+SKIPPED LINK!!
+size:'32' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+size:'34' eu_to_us exception
+found wrong gender
+All offers: 42 for page: 34 took: 234 seconds
+pids processed: 8/42
+PAGE: 35 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=35
+Original: 63, Urls: 63, Deduplicated: 57
+NOT SUPPORTED brand: adidas_W
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 57 for page: 35 took: 308 seconds
+pids processed: 9/57
+PAGE: 36 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=36
+Original: 63, Urls: 63, Deduplicated: 39
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 39 for page: 36 took: 221 seconds
+pids processed: 2/39
+PAGE: 37 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=37
+Original: 63, Urls: 63, Deduplicated: 51
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'39,5' eu_to_us exception
+found wrong gender
+found wrong gender
+found wrong gender
+All offers: 51 for page: 37 took: 275 seconds
+pids processed: 8/51
+PAGE: 38 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=38
+Original: 63, Urls: 63, Deduplicated: 52
+found wrong gender
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 52 for page: 38 took: 264 seconds
+pids processed: 5/52
+PAGE: 39 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=39
+Original: 63, Urls: 63, Deduplicated: 38
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 38 for page: 39 took: 222 seconds
+pids processed: 2/38
+PAGE: 40 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=40
+Original: 63, Urls: 63, Deduplicated: 44
+{
+ "product_id": "B37681",
+ "product_name": "adidas Swift Run Icey Pink Cloud White (W)",
+ "brand": "adidas",
+ "profit": 20.670000000000016,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/buty-damskie-adidas-swift-run-w-b37681-r-39-1-3-10555710849",
+ "stockx_link": "https://stockx.com/adidas-swift-run-icey-pink-cloud-white-w",
+ "available_sizes": {
+  "EU": [
+   "39 1/3"
+  ],
+  "US": [
+   "7.5"
+  ]
+ },
+ "highest_bid": 50,
+ "highest_bids": {
+  "available": {
+   "7.5": [
+    50
+   ]
+  },
+  "all": {
+   "8.5": [
+    84
+   ],
+   "8": [
+    75
+   ],
+   "7.5": [
+    50
+   ]
+  }
+ },
+ "retail": 380.8,
+ "offer_price": 132.77,
+ "payout": 153.44000000000003,
+ "bid_size": {
+  "EU": "39 1/3",
+  "US": "7.5"
+ },
+ "current_size_hb": 50
+}
+found wrong gender
+size:'34' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 44 for page: 40 took: 244 seconds
+pids processed: 3/44
+PAGE: 41 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=41
+Original: 63, Urls: 63, Deduplicated: 47
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+NOT SUPPORTED brand: adidas_W
+All offers: 47 for page: 41 took: 261 seconds
+pids processed: 10/47
+PAGE: 42 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=42
+Original: 63, Urls: 63, Deduplicated: 56
+found wrong gender
+All offers: 56 for page: 42 took: 290 seconds
+pids processed: 4/56
+PAGE: 43 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=43
+Original: 63, Urls: 63, Deduplicated: 48
+found wrong gender
+size:'39,5' eu_to_us exception
+size:'39,5' eu_to_us exception
+All offers: 48 for page: 43 took: 257 seconds
+pids processed: 7/48
+PAGE: 44 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=44
+Original: 63, Urls: 63, Deduplicated: 55
+size:'32' eu_to_us exception
+found wrong gender
+All offers: 55 for page: 44 took: 279 seconds
+pids processed: 2/55
+PAGE: 45 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=45
+Original: 63, Urls: 63, Deduplicated: 57
+found wrong gender
+found wrong gender
+found wrong gender
+found wrong gender
+All offers: 57 for page: 45 took: 292 seconds
+pids processed: 10/57
+PAGE: 46 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=46
+Original: 63, Urls: 63, Deduplicated: 42
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+All offers: 42 for page: 46 took: 237 seconds
+pids processed: 6/42
+PAGE: 47 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=47
+Original: 63, Urls: 63, Deduplicated: 51
+NOT SUPPORTED brand: adidas_W
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 51 for page: 47 took: 272 seconds
+pids processed: 4/51
+PAGE: 48 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=48
+Original: 63, Urls: 63, Deduplicated: 43
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 43 for page: 48 took: 232 seconds
+pids processed: 0/43
+PAGE: 49 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=49
+Original: 63, Urls: 63, Deduplicated: 50
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 50 for page: 49 took: 261 seconds
+pids processed: 1/50
+PAGE: 50 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=50
+Original: 63, Urls: 63, Deduplicated: 52
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 52 for page: 50 took: 277 seconds
+pids processed: 2/52
+PAGE: 51 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=51
+Original: 63, Urls: 63, Deduplicated: 53
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 53 for page: 51 took: 275 seconds
+pids processed: 0/53
+PAGE: 52 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=52
+Original: 63, Urls: 63, Deduplicated: 51
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 51 for page: 52 took: 268 seconds
+pids processed: 0/51
+PAGE: 53 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=53
+Original: 63, Urls: 63, Deduplicated: 54
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+HTTP error occurred: 403 Client Error: Forbidden for url: https://stockx.com/api/browse?&_search=FW5043&dataType=product&country=PL
+While loop, sleeping
+While loop, sleeping
+While loop, sleeping
+While loop, sleeping
+response 200 after 403
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 54 for page: 53 took: 763 seconds
+pids processed: 0/54
+PAGE: 54 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=54
+Original: 63, Urls: 63, Deduplicated: 50
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+found wrong gender
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+size:'32' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 50 for page: 54 took: 273 seconds
+pids processed: 4/50
+PAGE: 55 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=55
+Original: 63, Urls: 63, Deduplicated: 45
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+All offers: 45 for page: 55 took: 240 seconds
+pids processed: 4/45
+PAGE: 56 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=56
+Original: 63, Urls: 63, Deduplicated: 41
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 07486
+Wrong recognized digits, trying again...
+please enter the number Union 07486
+Wrong recognized digits, trying again...
+please enter the number you need 95704
+Wrong recognized digits, trying again...
+please enter the number Union 456 208
+NOT SUPPORTED brand: adidas_W
+NOT SUPPORTED brand: adidas_W
+Datadome protection. Sleeping...
+please enter the number you renew 326 518
+All offers: 41 for page: 56 took: 335 seconds
+pids processed: 5/41
+PAGE: 57 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=57
+Original: 63, Urls: 63, Deduplicated: 21
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number you need 58207
+Wrong recognized digits, trying again...
+please enter the number you need 58207
+Wrong recognized digits, trying again...
+please enter the number Union 029 614
+Datadome protection. Sleeping...
+please enter the number Union 548 297
+Datadome protection. Sleeping...
+please enter the number Union 754 136
+Datadome protection. Sleeping...
+please enter the number you near 95602
+Wrong recognized digits, trying again...
+please enter the number you near 95602
+Wrong recognized digits, trying again...
+please enter the number Union 96387
+Wrong recognized digits, trying again...
+please enter the number Union 921 387
+found wrong gender
+All offers: 21 for page: 57 took: 345 seconds
+pids processed: 6/21
+PAGE: 58 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=58
+Original: 63, Urls: 63, Deduplicated: 56
+Datadome protection. Sleeping...
+please enter the number Union 89605
+Wrong recognized digits, trying again...
+please enter the number Union 89605
+Wrong recognized digits, trying again...
+please enter the number you need 40598
+Wrong recognized digits, trying again...
+please enter the number you renew 369 740
+Datadome protection. Sleeping...
+please enter the number you need 89403
+Wrong recognized digits, trying again...
+please enter the number you need 89403
+Wrong recognized digits, trying again...
+please enter the number Union 692 187
+size:'39,5' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number you need 54328
+Wrong recognized digits, trying again...
+please enter the number you need 54328
+Wrong recognized digits, trying again...
+please enter the number Union 847 602
+Datadome protection. Sleeping...
+please enter the number Union 781 420
+Datadome protection. Sleeping...
+please enter the number you need to 60935
+Datadome protection. Sleeping...
+please enter the number Union 043 265
+Datadome protection. Sleeping...
+please enter the number Union 504 127
+Datadome protection. Sleeping...
+please enter the number you in 3 spoons 4560
+Wrong recognized digits, trying again...
+please enter the number you in 3 spoons 4560
+Wrong recognized digits, trying again...
+please enter the number Union 803 961
+Datadome protection. Sleeping...
+please enter the number Union 94586
+Wrong recognized digits, trying again...
+please enter the number Union 94586
+Wrong recognized digits, trying again...
+please enter the number Union 780 492
+Datadome protection. Sleeping...
+please enter the number you need to run 3840
+Wrong recognized digits, trying again...
+please enter the number you need to run 3840
+Wrong recognized digits, trying again...
+please enter the number Union 92507 for
+Datadome protection. Sleeping...
+please enter the number Union 794 826
+Datadome protection. Sleeping...
+please enter the number you reinstate 71423
+Wrong recognized digits, trying again...
+please enter the number you reinstate 71423
+Wrong recognized digits, trying again...
+please enter the number Union 938 750
+All offers: 56 for page: 58 took: 847 seconds
+pids processed: 13/56
+PAGE: 59 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=59
+Original: 63, Urls: 63, Deduplicated: 40
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number you need to run 8750
+Wrong recognized digits, trying again...
+please enter the number you need to run 8750
+Wrong recognized digits, trying again...
+please enter the number Union 782 195
+found wrong gender
+found wrong gender
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number you need to 43591
+Datadome protection. Sleeping...
+please enter the number using 0 2 4 5 6 7
+Datadome protection. Sleeping...
+please enter the number you renew 374 829
+Datadome protection. Sleeping...
+please enter the number Union 694 208
+Datadome protection. Sleeping...
+please enter the number you renew 08296 4
+Datadome protection. Sleeping...
+please enter the number you need for 21059
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 0 92861
+All offers: 40 for page: 59 took: 515 seconds
+pids processed: 13/40
+PAGE: 60 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=60
+Original: 63, Urls: 63, Deduplicated: 30
+Datadome protection. Sleeping...
+please enter the number you need 68042
+Wrong recognized digits, trying again...
+please enter the number you need 68042
+Wrong recognized digits, trying again...
+please enter the number Union 60872
+Wrong recognized digits, trying again...
+please enter the number Union 409 581
+Datadome protection. Sleeping...
+please enter the number Union 942 308
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number you need to 40697
+Datadome protection. Sleeping...
+please enter the number you renew 352 964
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number you renew 352 401
+size:'37' eu_to_us exception
+found wrong gender
+size:'37' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 742 193
+All offers: 30 for page: 60 took: 421 seconds
+pids processed: 5/30
+PAGE: 61 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=61
+Original: 63, Urls: 63, Deduplicated: 43
+Datadome protection. Sleeping...
+please enter the number you renew 370 642
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number you renew 379 628
+NOT SUPPORTED brand: adidas_W
+NOT SUPPORTED brand: adidas_W
+Datadome protection. Sleeping...
+please enter the number you need for 78320
+Datadome protection. Sleeping...
+please enter the number Union 53109 for
+size:'39,5' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 538 240
+Datadome protection. Sleeping...
+please enter the number Union 635 812
+Datadome protection. Sleeping...
+please enter the number Union 87356
+Wrong recognized digits, trying again...
+please enter the number Union 87356
+Wrong recognized digits, trying again...
+please enter the number Union 420 869
+Datadome protection. Sleeping...
+please enter the number Union 702 963
+Datadome protection. Sleeping...
+please enter the number you need 63095
+Wrong recognized digits, trying again...
+please enter the number you need 63095
+Wrong recognized digits, trying again...
+please enter the number Union 742 956
+All offers: 43 for page: 61 took: 588 seconds
+pids processed: 11/43
+PAGE: 62 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=62
+Original: 63, Urls: 63, Deduplicated: 47
+Datadome protection. Sleeping...
+please enter the number Union gate 71603
+Datadome protection. Sleeping...
+please enter the number you renew 3768 for 9
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number you renew 316 985
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'37' eu_to_us exception
+size:'41,5' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union gate 53406
+Datadome protection. Sleeping...
+please enter the number Union 057 192
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 204 185
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number Union 768 421
+Datadome protection. Sleeping...
+please enter the number Union 742 863
+Datadome protection. Sleeping...
+please enter the number you need 30594
+Wrong recognized digits, trying again...
+please enter the number you need 30594
+Wrong recognized digits, trying again...
+please enter the number Union 780 219
+All offers: 47 for page: 62 took: 573 seconds
+pids processed: 2/47
+PAGE: 63 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=63
+Original: 63, Urls: 63, Deduplicated: 44
+Datadome protection. Sleeping...
+please enter the number you need to 90567
+Datadome protection. Sleeping...
+please enter the number you need 26403
+Wrong recognized digits, trying again...
+please enter the number you need 26403
+Wrong recognized digits, trying again...
+please enter the number Union 94807 1
+Datadome protection. Sleeping...
+please enter the number Union 537 641
+Datadome protection. Sleeping...
+please enter the number you near 60453
+Wrong recognized digits, trying again...
+please enter the number you near 60453
+Wrong recognized digits, trying again...
+please enter the number using 508 697
+Datadome protection. Sleeping...
+please enter the number you need 84250
+Wrong recognized digits, trying again...
+please enter the number you need 84250
+Wrong recognized digits, trying again...
+please enter the number Union 925 086
+Datadome protection. Sleeping...
+please enter the number you need for 81506
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number Union 05367
+Wrong recognized digits, trying again...
+please enter the number Union 05367
+Wrong recognized digits, trying again...
+please enter the number un40 1869
+Datadome protection. Sleeping...
+please enter the number Union 576 140
+Datadome protection. Sleeping...
+please enter the number Union 051 924
+All offers: 44 for page: 63 took: 635 seconds
+pids processed: 2/44
+PAGE: 64 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=64
+Original: 63, Urls: 63, Deduplicated: 52
+Datadome protection. Sleeping...
+please enter the number Union 450 689
+Datadome protection. Sleeping...
+please enter the number you need to 07486
+Datadome protection. Sleeping...
+please enter the number Union gate 95741
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number you near 20769
+Wrong recognized digits, trying again...
+please enter the number you near 20769
+Wrong recognized digits, trying again...
+please enter the number Union 726 183
+Datadome protection. Sleeping...
+please enter the number Union 980 235
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number you renew 08273 4
+Datadome protection. Sleeping...
+please enter the number Union 751 326
+Datadome protection. Sleeping...
+please enter the number Union 86539
+Wrong recognized digits, trying again...
+please enter the number Union 86539
+Wrong recognized digits, trying again...
+please enter the number you in 06849 5
+Datadome protection. Sleeping...
+please enter the number you need for 85693
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 593 618
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number Union 24389
+Wrong recognized digits, trying again...
+please enter the number Union 24389
+Wrong recognized digits, trying again...
+please enter the number Union 945 310
+All offers: 52 for page: 64 took: 711 seconds
+pids processed: 5/52
+PAGE: 65 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=65
+Original: 63, Urls: 63, Deduplicated: 44
+Datadome protection. Sleeping...
+please enter the number you need for 80356
+Datadome protection. Sleeping...
+please enter the number you renew 349 178
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 546 918
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 63782 for
+Datadome protection. Sleeping...
+please enter the number Union 603 978
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union gate 23675
+Datadome protection. Sleeping...
+please enter the number Union gate 56402
+Datadome protection. Sleeping...
+please enter the number Union 70982
+Wrong recognized digits, trying again...
+please enter the number Union 70982
+Wrong recognized digits, trying again...
+please enter the number Union 965 013
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+found wrong gender
+size:'37' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 769 083
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 44 for page: 65 took: 561 seconds
+pids processed: 2/44
+PAGE: 66 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=66
+Original: 63, Urls: 63, Deduplicated: 36
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+Datadome protection. Sleeping...
+please enter the number Union 27843
+Wrong recognized digits, trying again...
+please enter the number Union 27843
+Wrong recognized digits, trying again...
+please enter the number you need for 86019
+found wrong gender
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number Union 678 192
+NOT SUPPORTED brand: adidas_W
+found wrong gender
+Datadome protection. Sleeping...
+please enter the number Union 09842
+Wrong recognized digits, trying again...
+please enter the number Union 09842
+Wrong recognized digits, trying again...
+please enter the number Union 968 430
+found wrong gender
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'39,5' eu_to_us exception
+found wrong gender
+All offers: 36 for page: 66 took: 361 seconds
+pids processed: 8/36
+PAGE: 67 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=67
+Original: 63, Urls: 63, Deduplicated: 55
+size:'41,5' eu_to_us exception
+size:'39,5' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'39,5' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'31' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 55 for page: 67 took: 304 seconds
+pids processed: 14/55
+PAGE: 68 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=68
+Original: 63, Urls: 63, Deduplicated: 46
+found wrong gender
+found wrong gender
+found wrong gender
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 46 for page: 68 took: 255 seconds
+pids processed: 8/46
+PAGE: 69 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=69
+Original: 63, Urls: 63, Deduplicated: 48
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 48 for page: 69 took: 263 seconds
+pids processed: 6/48
+PAGE: 70 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=70
+Original: 63, Urls: 63, Deduplicated: 51
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+found wrong gender
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+All offers: 51 for page: 70 took: 276 seconds
+pids processed: 4/51
+PAGE: 71 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=71
+Original: 63, Urls: 63, Deduplicated: 42
+SKIPPED LINK!!
+found wrong gender
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 42 for page: 71 took: 226 seconds
+pids processed: 2/42
+PAGE: 72 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=72
+Original: 63, Urls: 63, Deduplicated: 44
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 44 for page: 72 took: 248 seconds
+pids processed: 0/44
+PAGE: 73 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=73
+Original: 63, Urls: 63, Deduplicated: 46
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 46 for page: 73 took: 255 seconds
+pids processed: 1/46
+PAGE: 74 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=74
+Original: 63, Urls: 63, Deduplicated: 55
+size:'37' eu_to_us exception
+found wrong gender
+All offers: 55 for page: 74 took: 293 seconds
+pids processed: 7/55
+PAGE: 75 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=75
+Original: 63, Urls: 63, Deduplicated: 52
+found wrong gender
+found wrong gender
+All offers: 52 for page: 75 took: 279 seconds
+pids processed: 9/52
+PAGE: 76 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=76
+Original: 63, Urls: 63, Deduplicated: 46
+found wrong gender
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+found wrong gender
+found wrong gender
+All offers: 46 for page: 76 took: 256 seconds
+pids processed: 8/46
+PAGE: 77 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=77
+Original: 63, Urls: 63, Deduplicated: 47
+size:'37' eu_to_us exception
+SKIPPED LINK!!
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+found wrong gender
+found wrong gender
+found wrong gender
+found wrong gender
+size:'34' eu_to_us exception
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+size:'32' eu_to_us exception
+size:'33' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+All offers: 47 for page: 77 took: 260 seconds
+pids processed: 6/47
+PAGE: 78 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=78
+Original: 63, Urls: 63, Deduplicated: 50
+size:'32' eu_to_us exception
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'33' eu_to_us exception
+size:'34' eu_to_us exception
+found wrong gender
+All offers: 50 for page: 78 took: 269 seconds
+pids processed: 6/50
+PAGE: 79 URI: https://allegro.pl/kategoria/obuwie-damskie-531?stan=nowe&dostawa-z-polski=tak&marka=adidas&oryginalne-opakowanie-producenta=pude%C5%82ko&order=n&bmatch=dict210105-ctx-fas-1-4-0112&p=79
+Original: 63, Urls: 63, Deduplicated: 52
+found wrong gender
+found wrong gender
+size:'33,5' eu_to_us exception
+size:'34' eu_to_us exception
+size:'37' eu_to_us exception
+All offers: 52 for page: 79 took: 281 seconds
+pids processed: 9/52
+PAGE: 1 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=1
+Original: 63, Urls: 63, Deduplicated: 58
+SKIPPED LINK!!
+size:'34' eu_to_us exception
+All offers: 58 for page: 1 took: 327 seconds
+pids processed: 7/58
+PAGE: 2 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=2
+Original: 63, Urls: 63, Deduplicated: 59
+All offers: 59 for page: 2 took: 311 seconds
+pids processed: 5/59
+PAGE: 3 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=3
+Original: 63, Urls: 63, Deduplicated: 57
+All offers: 57 for page: 3 took: 292 seconds
+pids processed: 6/57
+PAGE: 4 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=4
+Original: 63, Urls: 63, Deduplicated: 57
+SKIPPED LINK!!
+All offers: 57 for page: 4 took: 288 seconds
+pids processed: 3/57
+PAGE: 5 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=5
+Original: 63, Urls: 63, Deduplicated: 51
+All offers: 51 for page: 5 took: 275 seconds
+pids processed: 11/51
+PAGE: 6 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=6
+Original: 63, Urls: 63, Deduplicated: 60
+All offers: 60 for page: 6 took: 309 seconds
+pids processed: 4/60
+PAGE: 7 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=7
+Original: 63, Urls: 63, Deduplicated: 60
+All offers: 60 for page: 7 took: 308 seconds
+pids processed: 4/60
+PAGE: 8 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=8
+Original: 63, Urls: 63, Deduplicated: 57
+All offers: 57 for page: 8 took: 289 seconds
+pids processed: 7/57
+PAGE: 9 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=9
+Original: 63, Urls: 63, Deduplicated: 54
+{
+ "product_id": "BB550PB1",
+ "product_name": "New Balance 550 White Grey",
+ "brand": "New Balance",
+ "profit": 82.70880000000011,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/new-balance-bb550pb1-10586258235",
+ "stockx_link": "https://stockx.com/new-balance-550-white-grey",
+ "available_sizes": {
+  "EU": [
+   "42,5"
+  ],
+  "US": [
+   "9"
+  ]
+ },
+ "highest_bid": 156,
+ "highest_bids": {
+  "available": {
+   "9": [
+    156,
+    155,
+    143
+   ]
+  },
+  "all": {
+   "10": [
+    186
+   ],
+   "4": [
+    168
+   ],
+   "13": [
+    166
+   ]
+  }
+ },
+ "retail": 448.00000000000006,
+ "offer_price": 491.0,
+ "payout": 573.7088000000001,
+ "bid_size": {
+  "EU": "42,5",
+  "US": "9"
+ },
+ "current_size_hb": 156
+}
+All offers: 54 for page: 9 took: 271 seconds
+pids processed: 2/54
+PAGE: 10 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=10
+Original: 63, Urls: 63, Deduplicated: 55
+All offers: 55 for page: 10 took: 273 seconds
+pids processed: 2/55
+PAGE: 11 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=11
+Original: 63, Urls: 63, Deduplicated: 48
+All offers: 48 for page: 11 took: 242 seconds
+pids processed: 2/48
+PAGE: 12 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=12
+Original: 63, Urls: 63, Deduplicated: 50
+All offers: 50 for page: 12 took: 251 seconds
+pids processed: 1/50
+PAGE: 13 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=13
+Original: 63, Urls: 63, Deduplicated: 38
+All offers: 38 for page: 13 took: 221 seconds
+pids processed: 4/38
+PAGE: 14 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=14
+Original: 63, Urls: 63, Deduplicated: 34
+All offers: 34 for page: 14 took: 201 seconds
+pids processed: 2/34
+PAGE: 15 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=15
+Original: 63, Urls: 63, Deduplicated: 53
+All offers: 53 for page: 15 took: 276 seconds
+pids processed: 2/53
+PAGE: 16 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=16
+Original: 63, Urls: 63, Deduplicated: 55
+All offers: 55 for page: 16 took: 272 seconds
+pids processed: 5/55
+PAGE: 17 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=17
+Original: 63, Urls: 63, Deduplicated: 60
+All offers: 60 for page: 17 took: 266 seconds
+pids processed: 0/60
+PAGE: 18 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=18
+Original: 63, Urls: 63, Deduplicated: 55
+{
+ "product_id": "CMT997HC",
+ "product_name": "New Balance 997H Beige",
+ "brand": "New Balance",
+ "profit": 43.03200000000004,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/buty-new-balance-997-spring-hike-trail-cmt997hc-43-10548775129",
+ "stockx_link": "https://stockx.com/new-balance-997h-beige",
+ "available_sizes": {
+  "EU": [
+   "43"
+  ],
+  "US": [
+   "9.5"
+  ]
+ },
+ "highest_bid": 90,
+ "highest_bids": {
+  "available": {
+   "9.5": [
+    90,
+    21
+   ]
+  },
+  "all": {
+   "9.5": [
+    90
+   ],
+   "10": [
+    75
+   ],
+   "8": [
+    72
+   ]
+  }
+ },
+ "retail": 403.20000000000005,
+ "offer_price": 269.0,
+ "payout": 312.03200000000004,
+ "bid_size": {
+  "EU": "43",
+  "US": "9.5"
+ },
+ "current_size_hb": 90
+}
+All offers: 55 for page: 18 took: 286 seconds
+pids processed: 7/55
+PAGE: 19 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=19
+Original: 63, Urls: 63, Deduplicated: 56
+SKIPPED LINK!!
+All offers: 56 for page: 19 took: 285 seconds
+pids processed: 9/56
+PAGE: 20 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=20
+Original: 63, Urls: 63, Deduplicated: 55
+All offers: 55 for page: 20 took: 275 seconds
+pids processed: 3/55
+PAGE: 21 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=21
+Original: 63, Urls: 63, Deduplicated: 58
+size:'38 2/3' eu_to_us exception
+SKIPPED LINK!!
+All offers: 58 for page: 21 took: 289 seconds
+pids processed: 5/58
+PAGE: 22 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=22
+Original: 63, Urls: 63, Deduplicated: 43
+SKIPPED LINK!!
+All offers: 43 for page: 22 took: 235 seconds
+pids processed: 3/43
+PAGE: 23 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=23
+Original: 63, Urls: 63, Deduplicated: 54
+{
+ "product_id": "BB550SE1",
+ "product_name": "New Balance 550 White Red",
+ "brand": "New Balance",
+ "profit": 100.24480000000005,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/buty-sportowe-meskie-new-balance-550-bb550se1-10490894849",
+ "stockx_link": "https://stockx.com/new-balance-550-white-red",
+ "available_sizes": {
+  "EU": [
+   "44",
+   "45,5"
+  ],
+  "US": [
+   "10",
+   "11.5"
+  ]
+ },
+ "highest_bid": 151,
+ "highest_bids": {
+  "available": {
+   "10": [
+    151,
+    144
+   ],
+   "11.5": [
+    141
+   ]
+  },
+  "all": {
+   "4.5": [
+    191,
+    180
+   ],
+   "6.5": [
+    168
+   ]
+  }
+ },
+ "retail": 492.80000000000007,
+ "offer_price": 453.64,
+ "payout": 553.8848,
+ "bid_size": {
+  "EU": "44",
+  "US": "10"
+ },
+ "current_size_hb": 151
+}
+All offers: 54 for page: 23 took: 285 seconds
+pids processed: 8/54
+PAGE: 24 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=24
+Original: 63, Urls: 63, Deduplicated: 44
+All offers: 44 for page: 24 took: 243 seconds
+pids processed: 7/44
+PAGE: 25 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=25
+Original: 63, Urls: 63, Deduplicated: 57
+{
+ "product_id": "BB550SE1",
+ "product_name": "New Balance 550 White Red",
+ "brand": "New Balance",
+ "profit": 54.88480000000004,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/buty-new-balance-550-meskie-bb550se1-biale-10467867872",
+ "stockx_link": "https://stockx.com/new-balance-550-white-red",
+ "available_sizes": {
+  "EU": [
+   "44",
+   "45,5"
+  ],
+  "US": [
+   "10",
+   "11.5"
+  ]
+ },
+ "highest_bid": 151,
+ "highest_bids": {
+  "available": {
+   "10": [
+    151,
+    144
+   ],
+   "11.5": [
+    141
+   ]
+  },
+  "all": {
+   "4.5": [
+    191,
+    180
+   ],
+   "6.5": [
+    168
+   ]
+  }
+ },
+ "retail": 492.80000000000007,
+ "offer_price": 499.0,
+ "payout": 553.8848,
+ "bid_size": {
+  "EU": "44",
+  "US": "10"
+ },
+ "current_size_hb": 151
+}
+{
+ "product_id": "BB550SE1",
+ "product_name": "New Balance 550 White Red",
+ "brand": "New Balance",
+ "profit": 54.88480000000004,
+ "site_name": "Allegro",
+ "offer_link": "https://allegro.pl/oferta/buty-new-balance-meskie-bb550se1-biale-r-44-10467867359",
+ "stockx_link": "https://stockx.com/new-balance-550-white-red",
+ "available_sizes": {
+  "EU": [
+   "44",
+   "45,5"
+  ],
+  "US": [
+   "10",
+   "11.5"
+  ]
+ },
+ "highest_bid": 151,
+ "highest_bids": {
+  "available": {
+   "10": [
+    151,
+    144
+   ],
+   "11.5": [
+    141
+   ]
+  },
+  "all": {
+   "4.5": [
+    191,
+    180
+   ],
+   "6.5": [
+    168
+   ]
+  }
+ },
+ "retail": 492.80000000000007,
+ "offer_price": 499.0,
+ "payout": 553.8848,
+ "bid_size": {
+  "EU": "44",
+  "US": "10"
+ },
+ "current_size_hb": 151
+}
+All offers: 57 for page: 25 took: 293 seconds
+pids processed: 6/57
+PAGE: 26 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=26
+Original: 63, Urls: 63, Deduplicated: 55
+SKIPPED LINK!!
+All offers: 55 for page: 26 took: 282 seconds
+pids processed: 3/55
+PAGE: 27 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=27
+Original: 63, Urls: 63, Deduplicated: 45
+All offers: 45 for page: 27 took: 253 seconds
+pids processed: 6/45
+PAGE: 28 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=28
+Original: 63, Urls: 63, Deduplicated: 46
+All offers: 46 for page: 28 took: 262 seconds
+pids processed: 2/46
+PAGE: 29 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=29
+Original: 63, Urls: 63, Deduplicated: 37
+All offers: 37 for page: 29 took: 209 seconds
+pids processed: 2/37
+PAGE: 30 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=30
+Original: 63, Urls: 63, Deduplicated: 52
+All offers: 52 for page: 30 took: 282 seconds
+pids processed: 6/52
+PAGE: 31 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=31
+Original: 63, Urls: 63, Deduplicated: 54
+All offers: 54 for page: 31 took: 289 seconds
+pids processed: 10/54
+PAGE: 32 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=32
+Original: 63, Urls: 63, Deduplicated: 46
+All offers: 46 for page: 32 took: 252 seconds
+pids processed: 5/46
+PAGE: 33 URI: https://allegro.pl/kategoria/meskie-sportowe-257929?dostawa-z-polski=tak&marka=New%20Balance&freeReturn=1&oryginalne-opakowanie-producenta=pude%C5%82ko&stan=nowe&bmatch=dict20120-m-ctx-fas-1-2-1203&order=n&p=33
+Original: 63, Urls: 63, Deduplicated: 52
+
+Process finished with exit code -1

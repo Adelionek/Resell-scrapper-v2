@@ -34,7 +34,7 @@ class AllegroRobotClass(SiteRobot):
             "price": ['div', '_1svub _lf05o _9a071_3SxcJ'],
             "ship_country": ['div', '_15mod _1vryf _34279_13Rv4'],
             "offer_title": ['h2', 'mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0'],
-            "sizes_tile": ['div', '_9a071_2llTZ _1nfka'],
+            "sizes_tile": ['div', '_1nfka _9a071_2llTZ'],
             "current_size": ['div', '_17qy1 _1vryf _f8818_1X1F-']
         }
         self.allegro_driver = awd.AllegroWebdriver()
@@ -191,11 +191,11 @@ class AllegroRobotClass(SiteRobot):
         bid = available_bids[:1][0]['localAmount']
         bid_shoe_size = available_bids[:1][0]['shoeSize']
         payout = (bid * 0.885) - 10
-        payout_pln = payout * EUR_PLN
+        payout_pln = payout * USD_PLN
         profit = payout_pln - output_product.offer_price
         output_product.profit = profit
 
-        if profit < 10:
+        if profit < -10:
             # print('Resell < 10 PLN for offer: {}. Offer price: {} Payout: {}'.
             #       format(output_product.offer_link, output_product.offer_price, payout))
             return None
@@ -247,7 +247,7 @@ class AllegroRobotClass(SiteRobot):
 
                 is_offer_valid = self.validate_link(offer_link)
                 if not is_offer_valid:
-                    print('SKIPPED LINK!!')
+                    # print('SKIPPED LINK!!')
                     continue
                 offer_soup = self.allegro_driver.make_soup_from_url(offer_link)
                 # offer_soup = self.siteSoup.make_soup(offer_link)
@@ -284,6 +284,7 @@ class AllegroRobotClass(SiteRobot):
                                   in checked_sizes]
 
                 if not available_bids:
+                    print('No available bids')
                     continue
 
                 # create output product
@@ -292,7 +293,7 @@ class AllegroRobotClass(SiteRobot):
                     print(json.dumps(output_product.__dict__, indent=1))
 
 
-            time.sleep(30)
+            # time.sleep(30)
             end_time = datetime.datetime.now()
             diff = end_time - start_time
             print("All offers: {0} for page: {1} took: {2} seconds".format(all_offers, p, diff.seconds))

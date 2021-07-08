@@ -4,61 +4,31 @@ from Products.StockxProduct import StockxProduct
 from Const.Currency import *
 from selenium.webdriver.chrome.options import Options
 import time
+import pyautogui
+import os
 import random
+from selenium import webdriver
 
 
 class Stockx:
     def __init__(self):
         self.request_headers_list = [
             {
-                'authority': 'stockx.com',
-                'appos': 'web',
-                'dnt': '1',
-                'x-requested-with': 'XMLHttpRequest',
-                'authorization': '',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36',
-                'appversion': '0.1',
-                'accept': '*/*',
-                'sec-fetch-site': 'same-origin',
-                'sec-fetch-mode': 'cors',
-                'sec-fetch-dest': 'empty',
-                'referer': 'https://stockx.com/search?s=yeezy',
-                'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-                'cookie': 'lastRskxRun=1611909286117; QuantumMetricUserID=3648103c5ab96c15b8375727bf88a956; QuantumMetricSessionID=49d26c714ccc2c025270e930a312ad02; rCookie=ow8cfwna6x2vrmjxmpqi2kkfdnh4h; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2021-01-29T08%3A34%3A48.757Z; stockx_dismiss_modal_expiration=2021-02-05T08%3A34%3A48.756Z; __cfduid=db91da5fa6cfb40a8cb0c3bc7ed14f6a41611909290; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; _pxvid=db0d117b-620c-11eb-bfb3-0242ac12000e; is_gdpr=true; stockx_ip_region=PL; _gcl_au=1.1.1771123155.1611909293; IR_gbd=stockx.com; IR_9060=1611909294176%7C0%7C1611909294176%7C%7C; below_retail_type=; brand_tiles_version=v1; bulk_shipping_enabled=true; default_apple_pay=false; related_products_length=v2; riskified_recover_updated_verbiage=false; product_page_affirm_callout_enabled_web=false; multi_edit_option=beatLowestAskBy; intl_payments=true; show_all_as_number=false; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v1; home_vertical_rows_web=false; ops_banner_id=blteaa2251163e21ba6; IR_PI=dc468200-620c-11eb-9a1b-42010a246625%7C1611995694176; _scid=1d7b551a-5d10-4c0e-b687-6059411764e1; _px_f394gi7Fvmc43dfg_user_id=ZGQyZmQwODAtNjIwYy0xMWViLWI1MDctNmRjYTA5ODcyMDk3; _px3=08a98fa4d077f31dc5657e6fa16789a6ec85175f13b74563604deceb6824fe8b:dceAbN5aXlprVMxHr9yalSKqUP9myuRN8yv+Mqig7LjxaoZV6l2yg6H8B0yr7UM3HkVmoUMILi07DJIwpRpcsw==:1000:KSVVXM3x1lo/wdniUxcvlhy7TkeApB4NE0gyFfv4gJ68x65UoPD3f/dzySF+ZgedJmBk6wwKm2B3+cnPgUKivjkh90e7EXnomZkk1xU1A9HTr0kzUqHf9QJpFJkWTNjjfTO57KvyQhT58rKza0ZjBC7rCGiWHKu3vgBOIXnE0BA=; _px_7125205957_cs=eyJpZCI6IjlkOTg2NjAwLTYyMjMtMTFlYi1iNTA3LTZkY2EwOTg3MjA5NyIsInN0b3JhZ2UiOnt9LCJleHBpcmF0aW9uIjoxNjExOTIwODk0NzEzfQ==; _dd_s=rum=0&expire=1611919998243; _pk_id.421.1a3e=145bd360b973e476.1611909294.2.1611919098.1611909294.; _pk_ses.421.1a3e=1; stockx_session=5fb5d480-ac46-4c0d-be5a-9aadef1554aa',
-                'if-none-match': 'W/"34228-PH0ickGOGQ9hJTfjXhHZo7WGJ9w"'
-            },
-            {
-                'authority': 'stockx.com',
-                'appos': 'web',
-                'dnt': '1',
-                'x-requested-with': 'XMLHttpRequest',
-                'authorization': '',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36',
-                'appversion': '0.1',
-                'accept': '*/*',
-                'sec-fetch-site': 'same-origin',
-                'sec-fetch-mode': 'cors',
-                'sec-fetch-dest': 'empty',
-                'referer': 'https://stockx.com/search?s=yeezy2',
-                'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-                'cookie': '__cfduid=d9939df0946dbe380cfa43a1f429bd6911611919138; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; _pxvid=c89a90aa-6223-11eb-b098-0242ac120003; is_gdpr=true; stockx_ip_region=PL; stockx_session=c2a056b7-45c5-4041-97cd-52ef1fdedb5e; _px3=a04bf22c13949fa652349e0af104524a932842efe347ff36be3ff0b64bfe1bed:UgI7nunIWucbUuCgc2PRHF36HiInxTHPChtmyub4KnNmFRjHiIMbx4ajyfS175eFX8hB54rZKdYkZVAJYviiQg==:1000:/U40eMi2Yla/6F/NTrcxPlHpoUzyqfrmVUox24kL5ixyhxUgxmhRpKYzL38jM+3UcrYX8ucqNfWK+JxnNA80a+ilRb928CH/CKBbX/6yVnnHuyiorxEhASL1OUOBWz9G+rEOd5p6gUjLvtNQ65kNy7dPeW4vXsAGOoiCa3sPfL8=; _gcl_au=1.1.1954284711.1611919142; below_retail_type=; brand_tiles_version=v1; bulk_shipping_enabled=true; default_apple_pay=false; intl_payments=true; multi_edit_option=beatLowestAskBy; product_page_affirm_callout_enabled_web=false; related_products_length=v2; riskified_recover_updated_verbiage=false; show_all_as_number=false; show_how_it_works=true; show_watch_modal=true; pdp_refactor_web=undefined; recently_viewed_web_home=false; salesforce_chatbot_prod=true; web_low_inv_checkout=v1; home_vertical_rows_web=false; ops_banner_id=blteaa2251163e21ba6; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2021-01-29T11%3A19%3A02.742Z; stockx_dismiss_modal_expiration=2021-02-05T11%3A19%3A02.741Z; IR_gbd=stockx.com; IR_9060=1611919143815%7C0%7C1611919143815%7C%7C; _pk_ses.421.1a3e=1; IR_PI=dc468200-620c-11eb-9a1b-42010a246625%7C1612005543815; _scid=908bbca6-b554-45f5-ac1c-673c6fcd74e1; _px_f394gi7Fvmc43dfg_user_id=Y2JhYjk4NTAtNjIyMy0xMWViLTllYzctNjU1YjQzMmJlMGU3; QuantumMetricUserID=3648103c5ab96c15b8375727bf88a956; QuantumMetricSessionID=49d26c714ccc2c025270e930a312ad02; rskxRunCookie=0; rCookie=ow8cfwna6x2vrmjxmpqi2kkfdnh4h; _px_7125205957_cs=eyJpZCI6ImM3YTVjNzgwLTYyMjMtMTFlYi1iNTA3LTZkY2EwOTg3MjA5NyIsInN0b3JhZ2UiOnt9LCJleHBpcmF0aW9uIjoxNjExOTIwOTU3NzA0fQ==; _dd_s=rum=0&expire=1611920059492; _pk_id.421.1a3e=23dc6c88b56acaf6.1611919144.1.1611919159.1611919144.; lastRskxRun=1611919159662'
-            },
-            {
-                'authority': 'stockx.com',
-                'appos': 'web',
-                'dnt': '1',
-                'x-requested-with': 'XMLHttpRequest',
-                'authorization': '',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36',
-                'appversion': '0.1',
-                'accept': '*/*',
-                'sec-fetch-site': 'same-origin',
-                'sec-fetch-mode': 'cors',
-                'sec-fetch-dest': 'empty',
-                'referer': 'https://stockx.com/search?s=nike',
-                'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
-                'cookie': '__cfduid=dd5b61fd3ea7e7064d7b1c6e55662c7e91611919191; _pk_ses.421.1a3e=1; stockx_homepage=sneakers; rskxRunCookie=0; _scid=f1e4d575-63f8-4f18-9639-4f4710b74e99; IR_gbd=stockx.com; rCookie=ow8cfwna6x2vrmjxmpqi2kkfdnh4h; stockx_session=08fbfb83-0cb6-41c4-bfbf-c61673768b3a; QuantumMetricUserID=3648103c5ab96c15b8375727bf88a956; QuantumMetricSessionID=49d26c714ccc2c025270e930a312ad02; _px_7125205957_cs=eyJpZCI6ImU2NmVjYTkwLTYyMjMtMTFlYi05ZWM3LTY1NWI0MzJiZTBlNyIsInN0b3JhZ2UiOnt9LCJleHBpcmF0aW9uIjoxNjExOTIxMDAzMTUwfQ==; _dd_s=rum=0&expire=1611920106215; _pk_id.421.1a3e=7b62419f2dedae11.1611919192.1.1611919206.1611919192.; lastRskxRun=1611919206397; IR_9060=1611919193680%7C0%7C1611919159905%7C%7C; IR_PI=dc468200-620c-11eb-9a1b-42010a246625%7C1612005593680',
-                'if-none-match': 'W/"34ef7-RGYNgbpM1jKLP9KmjL3GjqIjcK0"'
+                'authority': "stockx.com",
+                'appos': "web",
+                'x-requested-with': "XMLHttpRequest",
+                'sec-ch-ua-mobile': "?0",
+                'authorization': "",
+                'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+                'appversion': "0.1",
+                'accept': "*/*",
+                'sec-fetch-site': "same-origin",
+                'sec-fetch-mode': "cors",
+                'sec-fetch-dest': "empty",
+                'referer': "https://stockx.com/search?s=yeezy",
+                'accept-language': "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
+                'cookie': "_pxvid=2638991c-87bc-11eb-8d51-0242ac120010; _scid=bb278f4f-9d07-4a11-8e6b-cd2101264d21; _fbp=fb.1.1616052775468.1512743026; _px_f394gi7Fvmc43dfg_user_id=MjdjZDlkMDAtODdiYy0xMWViLTlmMmMtNzNhZDk0ZThiY2Y1; QuantumMetricUserID=956ee6dcda1bac7b622d71231759ba9b; rskxRunCookie=0; rCookie=iyvmzr2igdaz3bbyyp2uikmek3imk; _ga=GA1.2.522846141.1616052827; tracker_device=658e0c03-2df0-44f1-948e-4dcd83135bbe; stockx_seen_ask_new_info=true; ajs_anonymous_id=%22493b7ba2-13ad-4605-9d29-bfe7a25d8e45%22; ajs_user_id=%22d146558e-7e5e-11ea-b5c9-124738b50e12%22; stockx_experiments_id=web-61766968-43a2-4a9b-af32-d4daef82d74a; _rdt_uuid=1621339681588.06ff227e-26aa-4a64-bc53-9fdb0e68a852; ajs_group_id=%22ab_buy_now_rage_click_android.false%2Cab_conversion_module_location_ios.neither%2Cab_cross_sell_pdp_ios.neither%2Cab_ios_seller_profile_redesign.novariant%2Cab_multiask_redesign_android_v2.false%2Cab_product_page_refactor_ios_v3.false%2Cab_seller_profile_redesign_android.false%2Cab_test_most_popular_by_region_web.true%2Cab_test_product_page_refactor_web.false%2Cab_web_platform_targeting_test.false%22; _pk_id.421.1a3e=95f97e33a775061f.1616052775.157.1621957734.1621955632.; stockx_homepage=sneakers; language_code=en; stockx_market_country=PL; pxcts=df2bc880-dcd7-11eb-8f5e-ff71bbdf6131; stockx_session=3c8cec77-8e52-46f3-912b-b08e75aa9d07; _gcl_au=1.1.279748316.1625410568; _px3=4e872d45276a42b36aac51024248d3c095fc7098cf2fb5274e409b8d6924a1d0:8B20J7Qk9IfFRgwdx0PBJYYTD2mZM6d+EAEA2caErVfWWzXNYFiXagMNwZ8+1287ZKZIzYuHJrTph3FXhAAepQ==:1000:aKsRX0MGjmUvO+3YU+ifTM093L9KvzXNikNLBgQcIV8rnL13nJa7B34KHQoL+423fB4AKpFpYEmYpcITZ7WV8vSwGQIKtbXXvcqNc8m8rfrzOGxUUoNywMQj9Ra0OgJq2Nq5zSCRpqYVZ5bAgv0RgV64f87lLhNX/9C7Goy+KYy5sejFJ/0Aihgt4KbRkN4ceCctFtZMXHCkdJcy4XUyjw==; _uetsid=f6be37a0dcd711eba8745d7a524a90f3; _uetvid=d0aa8e40bd6b11ebb1cb851c7536a1f2; IR_gbd=stockx.com; IR_9060=1625410568092%7C0%7C1625410568092%7C%7C; __pdst=e3b9be5cd9a1470a84d86dd0f9ff113a; IR_PI=27180943-87bc-11eb-a4a8-42010a24662e%7C1625496968092; below_retail_type=; product_page_affirm_callout_enabled_web=false; riskified_recover_updated_verbiage=true; recently_viewed_web_home=false; home_vertical_rows_web=true; ops_banner_id=blteaa2251163e21ba6; stockx_dismiss_modal=true; stockx_dismiss_modal_set=2021-07-04T14%3A56%3A10.009Z; stockx_dismiss_modal_expiration=2021-07-11T14%3A56%3A10.009Z; QuantumMetricSessionID=d5ad50f91c8348329abb4f5eec2882d2; _px_7125205957_cs=eyJpZCI6ImY3ODU5YmUwLWRjZDctMTFlYi05MGYzLTIzMDVhZTJmYWUzOSIsInN0b3JhZ2UiOnt9LCJleHBpcmF0aW9uIjoxNjI1NDEyMzc0MDQ1fQ==; _dd_s=rum=0&expire=1625411475660; lastRskxRun=1625410576271",
+                'cache-control': "no-cache"
             }
         ]
         self.request_headers = self.request_headers_list[0]
@@ -152,10 +122,11 @@ class Stockx:
             if url_resp.status_code in [403, 502]:
                 while True:
                     print("While loop, sleeping")
-                    time.sleep(120)
+                    self.hold_W(4, link)
+                    time.sleep(10)
                     for i in range(4):
                         self.header_num = (self.header_num + i) % 3
-                        self.request_headers = self.request_headers_list[self.header_num]
+                        self.request_headers = self.request_headers_list[0]
                         # print('calling api from scraperapi')
                         # new_link = "http://api.scraperapi.com?api_key=64f35214a3ab1ce53b4d73f88b4f750c&url={}".format(link)
                         new_resp = requests.request("GET", link, headers=self.request_headers, data=payload)
@@ -169,3 +140,16 @@ class Stockx:
         except Exception as err:
             print(f'Other error occurred: {err}')
             return None
+
+    def hold_W(self, hold_time, link):
+        driver2 = webdriver.Chrome(executable_path=os.path.join(os.getcwd(), 'webDrivers', 'chromedriver.exe'))
+        driver2.get(link)
+        time.sleep(5)
+        pyautogui.moveTo(250, 431)
+        start = time.time()
+        while time.time() - start < hold_time:
+            pyautogui.mouseDown()
+        pyautogui.mouseUp()
+        pyautogui.moveTo(601, 390, 1, pyautogui.easeInQuad)
+        pyautogui.moveTo(301, 190, 2, pyautogui.easeInQuad)
+        driver2.close()

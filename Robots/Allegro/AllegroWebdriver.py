@@ -53,9 +53,12 @@ class AllegroWebdriver:
                 pass
 
     def make_soup_from_url(self, url):
-        self.driver.get(url)
-        self.driver.refresh()
-        time.sleep(1)
+        try:
+            self.driver.get(url)
+            self.driver.refresh()
+            time.sleep(1)
+        except Exception as e:
+            print("Error wirth driver get url", e)
         while True:
             try:
                 mainwraper = self.driver.find_element_by_class_name('main-wrapper')
@@ -64,13 +67,13 @@ class AllegroWebdriver:
                 return soup
             except NoSuchElementException as exception:
                 print('Datadome protection. Sleeping...')
-                DP.start_process(self.driver)
                 time.sleep(1)
+                DP.start_process(self.driver)
+
             except Exception as e:
                 print('unhandled error', e)
                 self.reset_driver()
                 self.make_soup_from_url(url)
-                pass
 
     def reset_driver(self):
         self.driver.close()

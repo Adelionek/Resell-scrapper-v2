@@ -43,4 +43,4 @@ FAKE_SELLERS = ['xooreek', 'N1A_PL', 'TIGER_77', 'e-outletstore', 'sklepik_DandB
                 '4F_Sklep', 'cool_shoes_1993', 'Client:58508393', 'super_sneakers', 'Stasic77',
                 'zakupowo_24', 'Fenglin', 'Weilin', 'Butorajshop', 'kongjing1', 'saleneo_com', 'LoveSales',
                 'saleneo-pl', 'e-outletstore', 'happness321', 'mangulek', 'coffeestroeo', 'yixinstar96', 'Wysylka365',
-                'saleneo-sport ']
+                'saleneo-sport', 'masail', 'mike1422', 'pomagalllo']
